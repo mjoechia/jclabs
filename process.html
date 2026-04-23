@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JC Labs | Our Process</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-tertiary": "#ffffff",
+          "surface-container-low": "#f5f3f4",
+          "outline": "#74777d",
+          "on-secondary-fixed-variant": "#004e5f",
+          "on-error-container": "#93000a",
+          "surface-container-high": "#e9e7e9",
+          "on-background": "#1b1c1d",
+          "error": "#ba1a1a",
+          "on-error": "#ffffff",
+          "surface-dim": "#dbd9db",
+          "on-primary-fixed-variant": "#38485a",
+          "surface-bright": "#fbf9fa",
+          "surface-container": "#efedef",
+          "surface-tint": "#4f6073",
+          "tertiary": "#131617",
+          "on-surface-variant": "#44474c",
+          "outline-variant": "#c4c6cd",
+          "background": "#fbf9fa",
+          "secondary-fixed-dim": "#4cd6fb",
+          "secondary-fixed": "#b3ebff",
+          "surface-container-lowest": "#ffffff",
+          "inverse-primary": "#b7c8de",
+          "surface": "#fbf9fa",
+          "inverse-surface": "#303032",
+          "secondary": "#00677d",
+          "primary": "#041627",
+          "secondary-container": "#50d9fe",
+          "primary-container": "#1a2b3c",
+          "on-tertiary-fixed": "#191c1d",
+          "on-secondary-container": "#005c70",
+          "tertiary-container": "#272a2b",
+          "primary-fixed": "#d2e4fb",
+          "tertiary-fixed-dim": "#c5c7c8",
+          "on-secondary": "#ffffff",
+          "on-tertiary-fixed-variant": "#454748",
+          "on-primary": "#ffffff",
+          "on-surface": "#1b1c1d",
+          "tertiary-fixed": "#e1e3e4",
+          "on-tertiary-container": "#8f9192",
+          "on-secondary-fixed": "#001f27",
+          "inverse-on-surface": "#f2f0f2",
+          "error-container": "#ffdad6",
+          "surface-variant": "#e4e2e3",
+          "surface-container-highest": "#e4e2e3",
+          "on-primary-fixed": "#0b1d2d",
+          "on-primary-container": "#8192a7",
+          "primary-fixed-dim": "#b7c8de"
+        },
+        borderRadius: {
+          DEFAULT: "0.125rem",
+          lg: "0.25rem",
+          xl: "0.5rem",
+          full: "0.75rem"
+        },
+        spacing: {
+          "stack-sm": "12px",
+          "gutter": "24px",
+          "unit": "8px",
+          "section-padding": "80px",
+          "container-max": "1280px",
+          "stack-md": "24px",
+          "stack-lg": "48px"
+        },
+        fontFamily: {
+          h2: ["Manrope"],
+          "body-md": ["Inter"],
+          h3: ["Manrope"],
+          "body-lg": ["Inter"],
+          h1: ["Manrope"],
+          "label-caps": ["Inter"]
+        },
+        fontSize: {
+          h2: ["36px", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
+          "body-md": ["16px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+          h3: ["24px", { lineHeight: "1.4", letterSpacing: "0", fontWeight: "600" }],
+          "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+          h1: ["48px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }],
+          "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.05em", fontWeight: "600" }]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  body { background-color: #fbf9fa; }
+  body { min-height: max(884px, 100dvh); }
+  .ai-signature-glow {
+    box-shadow: 0 0 20px rgba(0, 180, 216, 0.15);
+    border: 1px solid rgba(0, 180, 216, 0.3);
+  }
+</style>
+</head>
+<body class="font-body-md text-on-surface">
+
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-900 border-b border-[#E2E8F0] dark:border-slate-800 shadow-[0px_10px_30px_rgba(26,43,60,0.05)] sticky top-0 z-50">
+  <div class="flex justify-between items-center w-full px-6 py-4 max-w-[1280px] mx-auto">
+    <div class="flex items-center gap-4">
+      <span class="material-symbols-outlined text-slate-900 cursor-pointer active:opacity-70">menu</span>
+      <a href="index.html" class="text-xl font-bold text-[#1A2B3C] dark:text-[#E2E8F0] font-['Manrope'] tracking-tight">JC Labs</a>
+    </div>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-[#1A2B3C] font-semibold hover:bg-slate-50 transition-colors px-3 py-2 rounded-lg" href="index.html">Home</a>
+      <a class="text-[#00B4D8] font-semibold hover:bg-slate-50 transition-colors px-3 py-2 rounded-lg border-b-2 border-[#00B4D8]" href="process.html">Our Process</a>
+      <a class="text-[#1A2B3C] font-semibold hover:bg-slate-50 transition-colors px-3 py-2 rounded-lg" href="agents.html">AI Agents</a>
+      <a class="text-[#1A2B3C] font-semibold hover:bg-slate-50 transition-colors px-3 py-2 rounded-lg" href="index.html#contact">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="hidden md:block bg-[#00B4D8] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition-all">Get Started</a>
+  </div>
+</header>
+
+<main class="max-w-[1280px] mx-auto px-6 py-section-padding">
+
+  <!-- Hero Header -->
+  <section class="mb-stack-lg max-w-3xl">
+    <span class="font-label-caps text-secondary uppercase mb-stack-sm block">Our Framework</span>
+    <h1 class="font-h1 text-primary mb-stack-md">From Strategic Analysis to High-Performance Reality</h1>
+    <p class="font-body-lg text-on-surface-variant">We bridge the gap between abstract AI potential and operational excellence through a rigorous, three-phase architectural process designed for executive scale.</p>
+  </section>
+
+  <!-- Process Bento Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+
+    <!-- Step 1: Needs Analysis -->
+    <div class="md:col-span-8 bg-surface-container-lowest border border-outline-variant p-stack-lg rounded-xl flex flex-col justify-between group hover:border-secondary transition-all duration-300">
+      <div class="flex flex-col md:flex-row gap-gutter">
+        <div class="flex-1">
+          <div class="flex items-center gap-unit mb-stack-md">
+            <span class="w-8 h-8 rounded-full bg-primary-container text-secondary flex items-center justify-center font-bold text-sm">01</span>
+            <span class="font-label-caps text-secondary-container bg-primary-container px-3 py-1 rounded-full">Phase One</span>
+          </div>
+          <h2 class="font-h2 text-primary mb-stack-md">Needs Analysis</h2>
+          <p class="font-body-md text-on-surface-variant mb-stack-lg">We identify critical operational bottlenecks and untapped data opportunities. Our team conducts deep-dive workshops with stakeholders to map the intersection of business logic and machine learning potential.</p>
+          <div class="grid grid-cols-2 gap-stack-md">
+            <div class="p-stack-sm bg-surface rounded-lg border border-outline-variant">
+              <span class="material-symbols-outlined text-secondary mb-unit">troubleshoot</span>
+              <p class="font-label-caps text-primary">Data Audit</p>
+            </div>
+            <div class="p-stack-sm bg-surface rounded-lg border border-outline-variant">
+              <span class="material-symbols-outlined text-secondary mb-unit">groups</span>
+              <p class="font-label-caps text-primary">Stakeholder Alignment</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 rounded-xl overflow-hidden min-h-[240px] bg-gradient-to-br from-[#1A2B3C] to-[#041627] flex items-center justify-center">
+          <span class="material-symbols-outlined text-[#00B4D8] text-8xl">analytics</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: MVP -->
+    <div class="md:col-span-4 bg-primary-container text-on-primary-container p-stack-lg rounded-xl flex flex-col ai-signature-glow">
+      <div class="flex items-center justify-between mb-stack-md">
+        <span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-sm">02</span>
+        <span class="material-symbols-outlined text-secondary-container">auto_awesome</span>
+      </div>
+      <h3 class="font-h3 text-white mb-stack-sm">The MVP Engine</h3>
+      <p class="font-body-md text-on-primary-container opacity-80 mb-stack-lg">Rapid prototyping of a core AI model. We focus on achieving the 'Minimum Viable Precision' required to prove ROI before full-scale integration.</p>
+      <div class="mt-auto space-y-stack-sm">
+        <div class="flex items-center gap-unit text-secondary-container">
+          <span class="material-symbols-outlined text-[20px]">check_circle</span>
+          <span class="font-label-caps">Rapid Model Training</span>
+        </div>
+        <div class="flex items-center gap-unit text-secondary-container">
+          <span class="material-symbols-outlined text-[20px]">check_circle</span>
+          <span class="font-label-caps">ROI Validation Labs</span>
+        </div>
+        <div class="flex items-center gap-unit text-secondary-container">
+          <span class="material-symbols-outlined text-[20px]">check_circle</span>
+          <span class="font-label-caps">API Sandbox Testing</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Working System -->
+    <div class="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-gutter bg-surface-container-low border border-outline-variant p-stack-lg rounded-xl relative overflow-hidden">
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-unit mb-stack-md">
+          <span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-sm">03</span>
+          <span class="font-label-caps text-secondary">Final Deployment</span>
+        </div>
+        <h2 class="font-h2 text-primary mb-stack-md">Working System</h2>
+        <p class="font-body-md text-on-surface-variant">The transition from prototype to a mission-critical infrastructure. We ensure low-latency performance and enterprise-grade security protocols.</p>
+        <a href="index.html#contact" class="mt-stack-lg bg-secondary text-white px-gutter py-3 rounded-lg font-bold flex items-center gap-unit hover:brightness-110 transition-all active:scale-95 w-fit">
+          Start Your Project
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+      <div class="md:col-span-2 grid grid-cols-2 gap-stack-md">
+        <div class="bg-white p-stack-md rounded-xl border border-outline-variant shadow-sm flex flex-col items-center text-center">
+          <div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-stack-sm">
+            <span class="material-symbols-outlined text-on-secondary-container">speed</span>
+          </div>
+          <h4 class="font-h3 text-[18px] text-primary mb-2">High Efficiency</h4>
+          <p class="text-[14px] text-on-surface-variant">Optimization for 99.9% uptime and sub-100ms response times.</p>
+        </div>
+        <div class="bg-white p-stack-md rounded-xl border border-outline-variant shadow-sm flex flex-col items-center text-center">
+          <div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-stack-sm">
+            <span class="material-symbols-outlined text-on-secondary-container">security</span>
+          </div>
+          <h4 class="font-h3 text-[18px] text-primary mb-2">Secure Core</h4>
+          <p class="text-[14px] text-on-surface-variant">SOC2 compliant data handling with end-to-end encryption.</p>
+        </div>
+        <div class="bg-white p-stack-md rounded-xl border border-outline-variant shadow-sm flex flex-col items-center text-center">
+          <div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-stack-sm">
+            <span class="material-symbols-outlined text-on-secondary-container">monitoring</span>
+          </div>
+          <h4 class="font-h3 text-[18px] text-primary mb-2">Live Monitoring</h4>
+          <p class="text-[14px] text-on-surface-variant">Real-time model drift detection and automated re-training.</p>
+        </div>
+        <div class="bg-white p-stack-md rounded-xl border border-outline-variant shadow-sm flex flex-col items-center text-center">
+          <div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-stack-sm">
+            <span class="material-symbols-outlined text-on-secondary-container">hub</span>
+          </div>
+          <h4 class="font-h3 text-[18px] text-primary mb-2">Ecosystem Sync</h4>
+          <p class="text-[14px] text-on-surface-variant">Seamless integration with your existing ERP and CRM systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <section class="md:col-span-12 mt-section-padding border-t border-outline-variant pt-section-padding grid grid-cols-2 md:grid-cols-4 gap-gutter">
+      <div class="text-center">
+        <span class="block text-h2 font-bold text-secondary mb-unit">14 Days</span>
+        <span class="font-label-caps text-on-surface-variant">Average MVP Build</span>
+      </div>
+      <div class="text-center">
+        <span class="block text-h2 font-bold text-secondary mb-unit">3.5x</span>
+        <span class="font-label-caps text-on-surface-variant">Avg Efficiency Lift</span>
+      </div>
+      <div class="text-center">
+        <span class="block text-h2 font-bold text-secondary mb-unit">100%</span>
+        <span class="font-label-caps text-on-surface-variant">Data Sovereignty</span>
+      </div>
+      <div class="text-center">
+        <span class="block text-h2 font-bold text-secondary mb-unit">24/7</span>
+        <span class="font-label-caps text-on-surface-variant">Neural Monitoring</span>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#1A2B3C] text-white py-16 px-6 mt-20">
+  <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-on-primary-container">
+    <div class="text-2xl font-bold font-['Manrope'] text-white">JC Labs</div>
+    <div class="flex gap-6">
+      <a href="index.html" class="hover:text-white transition-colors">Home</a>
+      <a href="agents.html" class="hover:text-white transition-colors">AI Agents</a>
+      <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
+    </div>
+    <p>© 2024 JC Labs AI Consultancy. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/6586061913" target="_blank" rel="noopener noreferrer"
+  class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-[0px_8px_30px_rgba(37,211,102,0.4)] hover:scale-105 active:scale-95 transition-all"
+  aria-label="Chat on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 flex-shrink-0">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  <span class="text-sm font-bold whitespace-nowrap">Chat with us</span>
+</a>
+
+<!-- Mobile Bottom Nav -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md z-40 border-t border-[#E2E8F0] flex justify-around items-center px-4 py-3 shadow-[0px_-4px_20px_rgba(26,43,60,0.03)]" style="padding-bottom: max(12px, env(safe-area-inset-bottom))">
+  <a class="flex flex-col items-center justify-center text-[#1A2B3C] opacity-60 scale-95 active:scale-90 transition-transform" href="index.html">
+    <span class="material-symbols-outlined">home</span>
+    <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Home</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-[#00B4D8] font-bold scale-95 active:scale-90 transition-transform" href="process.html">
+    <span class="material-symbols-outlined">architecture</span>
+    <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Process</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-[#1A2B3C] opacity-60 scale-95 active:scale-90 transition-transform" href="agents.html">
+    <span class="material-symbols-outlined">psychology</span>
+    <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Agents</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-[#1A2B3C] opacity-60 scale-95 active:scale-90 transition-transform" href="index.html#contact">
+    <span class="material-symbols-outlined">mail</span>
+    <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Contact</span>
+  </a>
+</div>
+
+</body>
+</html>
