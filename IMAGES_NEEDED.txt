@@ -1,0 +1,291 @@
+================================================================================
+                    JC LABS WEBSITE - IMAGES NEEDED
+================================================================================
+
+TOTAL IMAGES TO CAPTURE: 24
+
+================================================================================
+SPLASH IMAGES (Homepage) - PRIORITY 1 - Must Have
+================================================================================
+
+1. chatrecept-dashboard.jpg
+   Size: 1200x675px (16:9) or 1920x1080px
+   What: Main dashboard/conversations hub (unified WhatsApp + Telegram + Web)
+   Location: images/projects/splash/
+   File Size: <400KB
+
+2. nexamatrix-heatmap.jpg
+   Size: 1200x675px (16:9) or 1920x1080px
+   What: Attendance Heatmap (color-coded visualization - GREEN/YELLOW/RED)
+   Location: images/projects/splash/
+   File Size: <400KB
+
+3. khuncaddy-marketplace.jpg
+   Size: 1200x675px (16:9) or 1920x1080px
+   What: Marketplace browse with profiles and verified badges
+   Location: images/projects/splash/
+   File Size: <400KB
+
+================================================================================
+CHATRECEPT PROJECT PAGE IMAGES (6 total)
+================================================================================
+
+MUST HAVE:
+4. chatrecept-01-dashboard.jpg
+   Size: 1920x1080px
+   What: Main dashboard showing conversations list
+   File Size: <500KB
+
+5. chatrecept-02-conversation.jpg
+   Size: 1920x1080px
+   What: Live customer conversation with AI response
+   File Size: <500KB
+
+HIGHLY RECOMMENDED:
+6. chatrecept-03-lead-scoring.jpg
+   Size: 1920x1080px
+   What: Lead scoring dashboard (Hot/Warm/Cold)
+   File Size: <500KB
+
+7. chatrecept-04-analytics.jpg
+   Size: 1920x1080px
+   What: Analytics dashboard with metrics and charts
+   File Size: <500KB
+
+NICE TO HAVE:
+8. chatrecept-05-websitebot.jpg
+   Size: 1920x1080px
+   What: WebsiteBot website builder preview
+   File Size: <500KB
+
+9. chatrecept-06-mobile.jpg
+   Size: 1080x1920px (vertical) or 375x667px
+   What: Dashboard on mobile device
+   File Size: <300KB
+
+Location: images/projects/chatrecept/
+
+================================================================================
+NEXAMATRIX HRMS PROJECT PAGE IMAGES (7 total)
+================================================================================
+
+MUST HAVE:
+10. nexamatrix-01-heatmap.jpg ⭐ HERO IMAGE
+    Size: 1920x1080px
+    What: Attendance Heatmap (VIBRANT! Make it colorful and eye-catching!)
+    File Size: <500KB
+
+11. nexamatrix-02-location-login.jpg
+    Size: 1920x1080px
+    What: AI location-based login verification
+    File Size: <500KB
+
+HIGHLY RECOMMENDED:
+12. nexamatrix-03-clockin.jpg
+    Size: 1920x1080px
+    What: Employee clock-in screen with GPS
+    File Size: <500KB
+
+13. nexamatrix-04-leave.jpg
+    Size: 1920x1080px
+    What: Leave management dashboard
+    File Size: <500KB
+
+14. nexamatrix-05-payroll.jpg
+    Size: 1920x1080px
+    What: Payroll processing screen
+    File Size: <500KB
+
+NICE TO HAVE:
+15. nexamatrix-06-analytics.jpg
+    Size: 1920x1080px
+    What: HR analytics dashboard with trends
+    File Size: <500KB
+
+16. nexamatrix-07-mobile.jpg
+    Size: 1080x1920px (vertical) or 375x667px
+    What: Dashboard on mobile device
+    File Size: <300KB
+
+Location: images/projects/nexamatrix/
+
+================================================================================
+KHUNCADDY PROJECT PAGE IMAGES (8 total)
+================================================================================
+
+MUST HAVE:
+17. khuncaddy-01-marketplace.jpg ⭐ HERO IMAGE
+    Size: 1920x1080px
+    What: Marketplace browse with profiles (SHOW VERIFIED BADGES!)
+    File Size: <500KB
+
+18. khuncaddy-02-verification.jpg ⚠️ PRIVACY!
+    Size: 1920x1080px
+    What: AI face verification process
+    File Size: <500KB
+    NOTE: BLUR OR REDACT ALL ACTUAL FACES!
+
+HIGHLY RECOMMENDED:
+19. khuncaddy-03-profile.jpg
+    Size: 1920x1080px
+    What: Companion profile with verified badge and ratings
+    File Size: <500KB
+
+20. khuncaddy-04-chat.jpg
+    Size: 1920x1080px
+    What: In-app chat/booking interface
+    File Size: <500KB
+
+NICE TO HAVE:
+21. khuncaddy-05-telegram-login.jpg
+    Size: 1920x1080px
+    What: Telegram login screen
+    File Size: <500KB
+
+22. khuncaddy-06-payment.jpg
+    Size: 1920x1080px
+    What: Blockchain payment confirmation screen
+    File Size: <500KB
+
+23. khuncaddy-07-ratings-tiers.jpg
+    Size: 1920x1080px
+    What: 5-star ratings and tier system
+    File Size: <500KB
+
+24. khuncaddy-08-mobile.jpg
+    Size: 1080x1920px (vertical) or 375x667px
+    What: Marketplace on mobile device
+    File Size: <300KB
+
+Location: images/projects/khuncaddy/
+
+================================================================================
+QUICK COUNTS BY PRIORITY
+================================================================================
+
+PRIORITY 1 (MUST HAVE) = 9 images
+✅ 3 splash images
+✅ 2 ChatRecept images
+✅ 2 NexaMatrix images
+✅ 2 KhunCaddy images
+
+PRIORITY 2 (HIGHLY RECOMMENDED) = 8 images
+✅ 2 ChatRecept images
+✅ 3 NexaMatrix images
+✅ 3 KhunCaddy images
+
+PRIORITY 3 (NICE TO HAVE) = 7 images
+✅ 2 ChatRecept images
+✅ 2 NexaMatrix images
+✅ 3 KhunCaddy images
+
+================================================================================
+GENERAL SPECIFICATIONS FOR ALL IMAGES
+================================================================================
+
+Format: JPG (JPEG) preferred, PNG if transparency needed
+Color Space: sRGB
+Quality: High quality, professional appearance
+Compression: Use TinyPNG or ImageOptim to reduce file size
+
+Privacy Requirements:
+❌ NO real personal names or data
+❌ NO unblurred faces in KhunCaddy verification
+✅ Anonymize employee/user data
+✅ Use sample or demo data
+✅ Blur/redact anything sensitive
+✅ Use staging environments, not production
+
+Where to Upload:
+jclabs/images/projects/splash/     → 3 splash images
+jclabs/images/projects/chatrecept/ → 6 ChatRecept images
+jclabs/images/projects/nexamatrix/ → 7 NexaMatrix images
+jclabs/images/projects/khuncaddy/  → 8 KhunCaddy images
+
+================================================================================
+CAPTURE ORDER RECOMMENDATION
+================================================================================
+
+START HERE (PHASE 1 - 9 images):
+1. chatrecept-dashboard.jpg (splash)
+2. nexamatrix-heatmap.jpg (splash) ← Make this vibrant!
+3. khuncaddy-marketplace.jpg (splash)
+4. chatrecept-01-dashboard.jpg
+5. chatrecept-02-conversation.jpg
+6. nexamatrix-01-heatmap.jpg ← Hero image!
+7. nexamatrix-02-location-login.jpg
+8. khuncaddy-01-marketplace.jpg
+9. khuncaddy-02-verification.jpg ← Blur faces!
+
+THEN ADD (PHASE 2 - 8 images):
+10-17: All Priority 2 images (Recommended)
+
+FINALLY (PHASE 3 - 7 images):
+18-24: All Priority 3 images (Nice to have)
+
+================================================================================
+KEY NOTES
+================================================================================
+
+🌟 HERO IMAGES (make these special):
+   - nexamatrix-01-heatmap.jpg → Vibrant, eye-catching visualization
+   - khuncaddy-01-marketplace.jpg → Professional, trust-building design
+
+⚠️ PRIVACY CRITICAL:
+   - khuncaddy-02-verification.jpg → BLUR ALL FACES!
+   - All images → No real personal data
+
+📐 DIMENSIONS:
+   - Splash: 1200x675px or 1920x1080px
+   - Detail: 1920x1080px or 1200x800px
+   - Mobile: 1080x1920px (vertical)
+
+💾 FILE SIZES:
+   - Splash: <400KB each
+   - Detail: <500KB each
+   - Mobile: <300KB each
+   - Total: ~12MB
+
+================================================================================
+LAUNCH OPTIONS
+================================================================================
+
+MINIMUM (just phase 1):
+- Website looks complete but with essential images only
+- Good for soft launch or initial review
+- Add more images later as Phase 2 & 3 complete
+
+RECOMMENDED (phase 1 + 2):
+- Professional presentation with all key features shown
+- Best balance of effort vs quality
+- 17 total images
+
+COMPLETE (all phases):
+- Full feature showcase
+- Maximum polish
+- 24 total images
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. Read MASTER_IMAGES_LIST.md for detailed specifications
+2. Read SCREENSHOT_CHECKLIST.md for capture guidance
+3. Start with PHASE 1 (9 images) - these are essential
+4. Create directory structure:
+   - jclabs/images/projects/splash/
+   - jclabs/images/projects/chatrecept/
+   - jclabs/images/projects/nexamatrix/
+   - jclabs/images/projects/khuncaddy/
+5. Capture images with correct filenames
+6. Optimize with TinyPNG
+7. Update HTML with image paths
+8. Test and deploy
+
+================================================================================
+Questions? See:
+- MASTER_IMAGES_LIST.md (detailed specs for every image)
+- SCREENSHOT_CHECKLIST.md (how to capture each screenshot)
+- PORTFOLIO_IMAGES_GUIDE.md (original image guide)
+- LATEST_UPDATES_SUMMARY.md (what changed)
+================================================================================

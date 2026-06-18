@@ -115,8 +115,8 @@
     </div>
     <nav class="hidden md:flex gap-8 items-center">
       <a class="font-['Manrope'] font-semibold tracking-tight text-[#00B4D8] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2 border-b-2 border-[#00B4D8]" href="index.html">Home</a>
+      <a class="font-['Manrope'] font-semibold tracking-tight text-[#1A2B3C] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2" href="projects.html">Our AI Projects</a>
       <a class="font-['Manrope'] font-semibold tracking-tight text-[#1A2B3C] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2" href="process.html">Our Process</a>
-      <a class="font-['Manrope'] font-semibold tracking-tight text-[#1A2B3C] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2" href="agents.html">AI Agents</a>
       <a class="font-['Manrope'] font-semibold tracking-tight text-[#1A2B3C] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2" href="#contact">Contact</a>
     </nav>
     <div class="flex items-center gap-4">
@@ -130,94 +130,171 @@
   <!-- Hero Section -->
   <section class="py-20 md:py-32 flex flex-col items-center text-center">
     <div class="inline-block px-4 py-1.5 bg-secondary-fixed text-on-secondary-container rounded-full font-label-caps text-label-caps mb-8">
-      PREMIUM AI STRATEGY
+      CUSTOM WEB APPS × AI INTEGRATION
     </div>
     <h1 class="font-h1 text-h1 text-primary mb-6 max-w-4xl">
-      Your <span class="text-[#00B4D8]">Sovereign AI</span> Enabler
+      Enterprise Web Apps <span class="text-[#00B4D8]">Powered by AI</span>
     </h1>
     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
-      Empowering executive-level decisions through high-end corporate reliability and cutting-edge digital innovation.
+      Building intelligent, scalable web applications that integrate cutting-edge AI to drive real business outcomes.
     </p>
     <div class="flex flex-col sm:flex-row gap-4">
-      <a href="#contact" class="bg-[#00B4D8] text-white px-8 py-4 rounded-lg font-semibold shadow-[0px_10px_30px_rgba(0,180,216,0.2)] hover:opacity-90 transition-all">
-        Initiate Consultation
+      <a href="#portfolio" class="bg-[#00B4D8] text-white px-8 py-4 rounded-lg font-semibold shadow-[0px_10px_30px_rgba(0,180,216,0.2)] hover:opacity-90 transition-all">
+        See Our Projects
       </a>
-      <a href="process.html" class="border border-[#1A2B3C] text-[#1A2B3C] px-8 py-4 rounded-lg font-semibold hover:bg-slate-50 transition-all">
-        View Portfolio
+      <a href="#contact" class="border border-[#1A2B3C] text-[#1A2B3C] px-8 py-4 rounded-lg font-semibold hover:bg-slate-50 transition-all">
+        Start Your App
       </a>
     </div>
   </section>
 
-  <!-- Bento Insight Grid -->
-  <section class="pb-24">
+  <!-- Featured Projects Portfolio -->
+  <section id="portfolio" class="pb-24">
+    <div class="mb-16 text-center">
+      <span class="font-label-caps text-[#00B4D8] uppercase mb-4 block">Featured Projects</span>
+      <h2 class="font-h2 text-h2 text-primary mb-4">AI-Powered Web Applications in Production</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        Real-world solutions combining advanced web development with intelligent AI integration.
+      </p>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-      <!-- Large Feature Card -->
-      <div class="md:col-span-8 bg-white border border-[#E2E8F0] p-10 rounded-xl flex flex-col justify-between min-h-[400px] hover:shadow-[0px_10px_30px_rgba(26,43,60,0.05)] transition-all">
-        <div>
-          <div class="flex items-center gap-2 text-[#00B4D8] mb-4">
-            <span class="material-symbols-outlined">auto_awesome</span>
-            <span class="font-label-caps text-label-caps uppercase tracking-wider">Live AI Insights</span>
+      <!-- ChatRecept - Large Featured Card -->
+      <div class="md:col-span-8 bg-white border border-[#E2E8F0] rounded-xl overflow-hidden hover:shadow-[0px_10px_30px_rgba(26,43,60,0.05)] transition-all">
+        <div class="bg-gradient-to-br from-[#1A2B3C] to-[#041627] h-56 flex items-center justify-center relative overflow-hidden" id="chatrecept-splash">
+          <img src="images/projects/splash/chatrecept-dashboard.jpg" alt="ChatRecept Dashboard" class="absolute inset-0 w-full h-full object-cover opacity-0" />
+          <div class="text-center relative z-10">
+            <span class="material-symbols-outlined text-[#00B4D8] text-6xl block mb-2">smart_toy</span>
+            <p class="text-white text-sm font-semibold">AI Business Automation Platform</p>
           </div>
-          <h2 class="font-h2 text-h2 text-primary mb-4">Precision Strategic Analysis</h2>
-          <p class="font-body-md text-body-md text-on-surface-variant max-w-lg">
-            Leverage our proprietary Large Language Models tuned specifically for corporate strategy and resource optimization.
-          </p>
         </div>
-        <div class="mt-8 pt-8 border-t border-[#E2E8F0] flex justify-between items-end">
-          <div class="flex gap-8">
-            <div>
-              <div class="text-h3 font-h3 text-primary">94%</div>
-              <div class="text-label-caps font-label-caps text-on-surface-variant">ACCURACY</div>
-            </div>
-            <div>
-              <div class="text-h3 font-h3 text-primary">12ms</div>
-              <div class="text-label-caps font-label-caps text-on-surface-variant">LATENCY</div>
-            </div>
-          </div>
-          <span class="material-symbols-outlined text-[#00B4D8] text-4xl">trending_up</span>
-        </div>
-      </div>
-
-      <!-- Secondary Square Card -->
-      <div class="md:col-span-4 bg-primary-container p-10 rounded-xl text-white flex flex-col justify-between hover:scale-[1.02] transition-transform">
-        <span class="material-symbols-outlined text-secondary-container text-5xl">psychology</span>
-        <div>
-          <h3 class="font-h3 text-h3 mb-2 text-white">Advanced Modeling</h3>
-          <p class="text-on-primary-container text-sm">
-            Tailored neural architectures designed for sovereign enterprise deployment.
-          </p>
-        </div>
-      </div>
-
-      <!-- Data Card -->
-      <div class="md:col-span-4 bg-surface-container-low border border-[#E2E8F0] p-8 rounded-xl flex flex-col gap-4">
-        <div class="flex justify-between items-center">
-          <span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Resource Library</span>
-          <span class="material-symbols-outlined text-[#1A2B3C]">library_books</span>
-        </div>
-        <div class="space-y-3">
-          <div class="h-2 bg-white rounded-full w-full"><div class="h-full bg-[#00B4D8] rounded-full w-3/4"></div></div>
-          <div class="h-2 bg-white rounded-full w-full"><div class="h-full bg-[#00B4D8] rounded-full w-1/2"></div></div>
-          <div class="h-2 bg-white rounded-full w-full"><div class="h-full bg-[#00B4D8] rounded-full w-4/5"></div></div>
-        </div>
-        <p class="text-sm font-semibold text-primary mt-2">Active Data Syncing...</p>
-      </div>
-
-      <!-- Wide Card -->
-      <div class="md:col-span-8 bg-white border border-[#E2E8F0] rounded-xl overflow-hidden flex flex-col md:flex-row">
-        <div class="md:w-1/2 bg-gradient-to-br from-[#1A2B3C] to-[#041627] flex items-center justify-center p-12 min-h-[200px]">
-          <span class="material-symbols-outlined text-[#00B4D8] text-8xl">security</span>
-        </div>
-        <div class="md:w-1/2 p-8 flex flex-col justify-center">
-          <h3 class="font-h3 text-h3 text-primary mb-4">Infrastructure Security</h3>
+        <div class="p-10">
+          <h3 class="font-h2 text-h3 text-primary mb-2">ChatRecept</h3>
+          <p class="text-[#00B4D8] font-label-caps text-label-caps uppercase tracking-wider mb-6">AI Customer Communication × Business Automation</p>
           <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-            Ensuring complete data sovereignty with isolated on-premise AI deployments.
+            An all-in-one AI platform that automates customer interactions across WhatsApp, Telegram, and websites. Three powerful integrated products:
           </p>
-          <a class="text-[#00B4D8] font-bold flex items-center gap-2 group" href="process.html">
-            Protocol Overview
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+              <div>
+                <p class="font-semibold text-primary">AI Frontdesk</p>
+                <p class="text-sm text-on-surface-variant">Intelligent chatbot that answers customer questions 24/7, qualifies leads, and captures sales across all channels</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+              <div>
+                <p class="font-semibold text-primary">WebsiteBot</p>
+                <p class="text-sm text-on-surface-variant">AI-powered website builder that generates professional websites instantly through simple conversation</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+              <div>
+                <p class="font-semibold text-primary">AI Secretariat</p>
+                <p class="text-sm text-on-surface-variant">Compliance & legal automation for ACRA filings, contracts, and business documentation</p>
+              </div>
+            </li>
+          </ul>
+          <p class="font-body-md text-body-md text-on-surface-variant text-sm mb-6">Perfect for restaurants, retail, services, real estate, consultants—any business handling customer inquiries.</p>
+          <a href="https://github.com/mjoechia/chatrecept" target="_blank" class="text-[#00B4D8] font-bold flex items-center gap-2 group hover:gap-3 transition-all">
+            View Project
             <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
         </div>
+      </div>
+
+      <!-- nexamatrix HRMS -->
+      <div class="md:col-span-4 bg-white border border-[#E2E8F0] rounded-xl overflow-hidden hover:shadow-[0px_10px_30px_rgba(26,43,60,0.05)] transition-all flex flex-col">
+        <div class="bg-gradient-to-br from-[#00B4D8] to-[#0099cc] h-40 flex items-center justify-center relative overflow-hidden" id="nexamatrix-splash">
+          <img src="images/projects/splash/nexamatrix-heatmap.jpg" alt="NexaMatrix Attendance Heatmap" class="absolute inset-0 w-full h-full object-cover opacity-0" />
+          <span class="material-symbols-outlined text-white text-5xl relative z-10">heat_map</span>
+        </div>
+        <div class="p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-h3 text-h3 text-primary mb-2">nexamatrix HRMS</h3>
+            <p class="text-[#00B4D8] font-label-caps text-label-caps uppercase tracking-wider mb-4 text-xs">HR Management × AI Security</p>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+              Complete HR platform with stunning Attendance Heatmap and AI-powered location-based security.
+            </p>
+            <p class="text-sm text-on-surface-variant">
+              Attendance tracking, leave management, payroll processing, and location-verified employee login.
+            </p>
+          </div>
+          <a href="https://github.com/mjoechia/nexahrsoft2" target="_blank" class="text-[#00B4D8] font-bold flex items-center gap-2 group hover:gap-3 transition-all mt-6">
+            View Project
+            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- KhunCaddy - AI Verification Focus -->
+      <div class="md:col-span-4 bg-gradient-to-br from-[#1A2B3C] to-[#041627] rounded-xl p-10 text-white flex flex-col justify-between hover:shadow-[0px_10px_30px_rgba(26,43,60,0.15)] transition-all relative overflow-hidden" id="khuncaddy-splash">
+        <img src="images/projects/splash/khuncaddy-marketplace.jpg" alt="KhunCaddy Marketplace" class="absolute inset-0 w-full h-full object-cover opacity-0" />
+        <div class="relative z-10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="material-symbols-outlined text-[#00B4D8] text-3xl">verified_user</span>
+            <h3 class="font-h2 text-h3">KhunCaddy</h3>
+          </div>
+          <p class="text-secondary-container font-label-caps text-label-caps uppercase tracking-wider mb-6">Marketplace × AI Identity Verification</p>
+          <p class="font-body-md text-body-md text-white/90 mb-4">
+            A trusted companion booking marketplace with cutting-edge AI facial recognition to verify every user and ensure platform safety.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="text-sm text-white/80">✓ AI face verification (proves users are real)</li>
+            <li class="text-sm text-white/80">✓ Instant Telegram login integration</li>
+            <li class="text-sm text-white/80">✓ Blockchain payments (TON/Telegram Wallet)</li>
+            <li class="text-sm text-white/80">✓ 5-star rating & community governance</li>
+          </ul>
+        </div>
+        <a href="https://github.com/BkkBabe/bkkbabe" target="_blank" class="text-secondary-container font-bold flex items-center gap-2 group hover:gap-3 transition-all mt-4 relative z-10">
+          View Project
+          <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Development Capabilities -->
+      <div class="md:col-span-4 bg-secondary-fixed border border-[#E2E8F0] rounded-xl p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="material-symbols-outlined text-on-secondary-container text-3xl">code</span>
+          <h3 class="font-h3 text-h3 text-on-secondary-container">Modern Tech Stack</h3>
+        </div>
+        <p class="font-body-md text-body-md text-on-secondary-container mb-6">
+          Built with React, Vue, Node.js, Python, and AI frameworks for scalable, intelligent applications.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 bg-white/20 text-on-secondary-container rounded-full text-xs font-semibold">React</span>
+          <span class="px-3 py-1.5 bg-white/20 text-on-secondary-container rounded-full text-xs font-semibold">Node.js</span>
+          <span class="px-3 py-1.5 bg-white/20 text-on-secondary-container rounded-full text-xs font-semibold">Python</span>
+          <span class="px-3 py-1.5 bg-white/20 text-on-secondary-container rounded-full text-xs font-semibold">AI/ML</span>
+        </div>
+      </div>
+
+      <!-- AI Integration Benefits -->
+      <div class="md:col-span-4 bg-white border border-[#E2E8F0] rounded-xl p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="material-symbols-outlined text-[#00B4D8] text-3xl">auto_awesome</span>
+          <h3 class="font-h3 text-h3 text-primary">Why AI Integration?</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 text-lg">done</span>
+            <p class="text-sm font-body-md text-on-surface-variant">Automated workflows and process optimization</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 text-lg">done</span>
+            <p class="text-sm font-body-md text-on-surface-variant">Intelligent data analysis and insights</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 text-lg">done</span>
+            <p class="text-sm font-body-md text-on-surface-variant">Enhanced user experience with AI assistance</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 text-lg">done</span>
+            <p class="text-sm font-body-md text-on-surface-variant">Scalable, future-proof applications</p>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -226,18 +303,18 @@
   <section class="py-20 mb-20 bg-surface-bright border border-[#E2E8F0] rounded-2xl px-10 flex flex-col md:flex-row items-center justify-between gap-12 overflow-hidden relative">
     <div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
     <div class="max-w-xl relative z-10">
-      <h2 class="font-h2 text-h2 text-primary mb-6">Experience the Executive Workspace</h2>
+      <h2 class="font-h2 text-h2 text-primary mb-6">Build Your Next AI-Powered Web App</h2>
       <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-        Gain access to real-time project tracking, model performance metrics, and a direct line to our lead strategy architects.
+        From concept to deployment, we design and build enterprise-grade web applications enhanced with intelligent AI capabilities that solve real business problems.
       </p>
       <div class="flex items-center gap-4">
-        <span class="text-sm font-semibold text-primary">Trusted by 150+ Leading Consultancies</span>
+        <span class="text-sm font-semibold text-primary">✓ Custom Development  ✓ AI Integration  ✓ Enterprise Ready</span>
       </div>
     </div>
     <div class="relative z-10">
       <a href="#contact" class="bg-[#1A2B3C] text-white px-10 py-5 rounded-lg font-bold shadow-xl hover:bg-slate-800 transition-all flex items-center gap-3">
-        <span class="material-symbols-outlined">account_circle</span>
-        Start a Conversation
+        <span class="material-symbols-outlined">auto_awesome</span>
+        Discuss Your Project
       </a>
     </div>
   </section>
@@ -247,9 +324,9 @@
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-12">
         <span class="font-label-caps text-secondary uppercase mb-4 block">Get In Touch</span>
-        <h2 class="font-h2 text-h2 text-primary mb-4">Start Your AI Journey</h2>
+        <h2 class="font-h2 text-h2 text-primary mb-4">Let's Build Something Intelligent</h2>
         <p class="font-body-md text-body-md text-on-surface-variant">
-          Tell us about your challenges and we'll architect a solution tailored to your enterprise.
+          Share your vision and let us create a custom web application powered by AI that drives real value for your business.
         </p>
       </div>
 
@@ -281,14 +358,15 @@
           </div>
 
           <div>
-            <label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase" for="service">Area of Interest</label>
+            <label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase" for="service">Service Interest</label>
             <select id="service" name="service"
               class="w-full px-4 py-3 border border-outline-variant rounded-lg font-body-md text-on-surface bg-surface focus:outline-none focus:ring-2 focus:ring-[#00B4D8] focus:border-transparent transition-all">
               <option value="">Select a service...</option>
-              <option value="strategy">AI Strategy & Consulting</option>
-              <option value="agents">Autonomous AI Agents</option>
-              <option value="deployment">Private AI Deployment</option>
-              <option value="audit">Strategic AI Audit</option>
+              <option value="web-app">Custom Web App Development</option>
+              <option value="ai-integration">AI Integration & Enhancement</option>
+              <option value="hrms">HR Management Systems</option>
+              <option value="kyc">KYC/Identity Solutions</option>
+              <option value="consultation">Development Consultation</option>
               <option value="other">Other</option>
             </select>
           </div>
@@ -329,35 +407,41 @@
     <div class="col-span-1 md:col-span-1">
       <div class="text-2xl font-bold mb-6 font-['Manrope']">JC Labs</div>
       <p class="text-on-primary-container text-sm leading-relaxed">
-        Precision Modernism applied to AI strategy. Shaping the future of sovereign enterprise intelligence with unmatched technical competence.
+        Building enterprise web applications enhanced with intelligent AI. Custom solutions that solve real business problems with cutting-edge technology.
       </p>
     </div>
     <div>
-      <h4 class="font-bold mb-6 text-secondary-container">Solutions</h4>
+      <h4 class="font-bold mb-6 text-secondary-container">Services</h4>
       <ul class="space-y-4 text-sm text-on-primary-container">
-        <li><a class="hover:text-white transition-colors" href="#">Strategic AI Audits</a></li>
-        <li><a class="hover:text-white transition-colors" href="#">Neural Optimization</a></li>
-        <li><a class="hover:text-white transition-colors" href="#">Private Deployments</a></li>
-        <li><a class="hover:text-white transition-colors" href="#">Model Governance</a></li>
+        <li><a class="hover:text-white transition-colors" href="#">Custom Web Development</a></li>
+        <li><a class="hover:text-white transition-colors" href="#">AI Integration</a></li>
+        <li><a class="hover:text-white transition-colors" href="#">HRMS Solutions</a></li>
+        <li><a class="hover:text-white transition-colors" href="#">KYC Platforms</a></li>
       </ul>
     </div>
     <div>
-      <h4 class="font-bold mb-6 text-secondary-container">Company</h4>
+      <h4 class="font-bold mb-6 text-secondary-container">Quick Links</h4>
       <ul class="space-y-4 text-sm text-on-primary-container">
-        <li><a class="hover:text-white transition-colors" href="process.html">Our Process</a></li>
-        <li><a class="hover:text-white transition-colors" href="agents.html">AI Agents</a></li>
-        <li><a class="hover:text-white transition-colors" href="#contact">Contact</a></li>
-        <li><a class="hover:text-white transition-colors" href="#">Privacy Charter</a></li>
+        <li><a class="hover:text-white transition-colors" href="projects.html">Our AI Projects</a></li>
+        <li><a class="hover:text-white transition-colors" href="process.html">Development Process</a></li>
+        <li><a class="hover:text-white transition-colors" href="#portfolio">Featured Work</a></li>
+        <li><a class="hover:text-white transition-colors" href="#contact">Get in Touch</a></li>
       </ul>
     </div>
     <div>
-      <h4 class="font-bold mb-6 text-secondary-container">Executive Briefing</h4>
-      <p class="text-sm text-on-primary-container mb-4">Subscribe to our monthly technical insights for the C-suite.</p>
-      <div class="flex">
-        <input class="bg-primary border-none rounded-l-lg text-sm px-4 py-3 focus:ring-1 focus:ring-[#00B4D8] w-full text-white placeholder-on-primary-container" placeholder="Email address" type="email"/>
-        <button class="bg-[#00B4D8] px-4 rounded-r-lg hover:opacity-90">
-          <span class="material-symbols-outlined">send</span>
-        </button>
+      <h4 class="font-bold mb-6 text-secondary-container">Contact Us</h4>
+      <p class="text-sm text-on-primary-container mb-4">Ready to start your web app project? Let's talk.</p>
+      <div class="flex gap-2">
+        <a href="https://wa.me/6586061913" target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#25D366] px-4 py-3 rounded-lg hover:opacity-90 flex items-center justify-center gap-2 font-semibold text-sm text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          WhatsApp
+        </a>
+        <a href="#contact" class="flex-1 bg-[#00B4D8] px-4 py-3 rounded-lg hover:opacity-90 flex items-center justify-center gap-2 font-semibold text-sm text-white">
+          <span class="material-symbols-outlined text-lg">mail</span>
+          Email
+        </a>
       </div>
     </div>
   </div>
@@ -387,13 +471,13 @@
     <span class="material-symbols-outlined">home</span>
     <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Home</span>
   </a>
+  <a class="flex flex-col items-center justify-center text-[#1A2B3C] opacity-60 scale-95 active:scale-90 transition-transform" href="projects.html">
+    <span class="material-symbols-outlined">auto_awesome</span>
+    <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Projects</span>
+  </a>
   <a class="flex flex-col items-center justify-center text-[#1A2B3C] opacity-60 scale-95 active:scale-90 transition-transform" href="process.html">
     <span class="material-symbols-outlined">architecture</span>
     <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Process</span>
-  </a>
-  <a class="flex flex-col items-center justify-center text-[#1A2B3C] opacity-60 scale-95 active:scale-90 transition-transform" href="agents.html">
-    <span class="material-symbols-outlined">psychology</span>
-    <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Agents</span>
   </a>
   <a class="flex flex-col items-center justify-center text-[#1A2B3C] opacity-60 scale-95 active:scale-90 transition-transform" href="#contact">
     <span class="material-symbols-outlined">mail</span>

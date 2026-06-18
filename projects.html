@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JC Labs | Our AI Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-tertiary": "#ffffff",
+          "surface-container-low": "#f5f3f4",
+          "outline": "#74777d",
+          "on-secondary-fixed-variant": "#004e5f",
+          "on-error-container": "#93000a",
+          "surface-container-high": "#e9e7e9",
+          "on-background": "#1b1c1d",
+          "error": "#ba1a1a",
+          "on-error": "#ffffff",
+          "surface-dim": "#dbd9db",
+          "on-primary-fixed-variant": "#38485a",
+          "surface-bright": "#fbf9fa",
+          "surface-container": "#efedef",
+          "surface-tint": "#4f6073",
+          "tertiary": "#131617",
+          "on-surface-variant": "#44474c",
+          "outline-variant": "#c4c6cd",
+          "background": "#fbf9fa",
+          "secondary-fixed-dim": "#4cd6fb",
+          "secondary-fixed": "#b3ebff",
+          "surface-container-lowest": "#ffffff",
+          "inverse-primary": "#b7c8de",
+          "surface": "#fbf9fa",
+          "inverse-surface": "#303032",
+          "secondary": "#00677d",
+          "primary": "#041627",
+          "secondary-container": "#50d9fe",
+          "primary-container": "#1a2b3c",
+          "on-tertiary-fixed": "#191c1d",
+          "on-secondary-container": "#005c70",
+          "tertiary-container": "#272a2b",
+          "primary-fixed": "#d2e4fb",
+          "tertiary-fixed-dim": "#c5c7c8",
+          "on-secondary": "#ffffff",
+          "on-tertiary-fixed-variant": "#454748",
+          "on-primary": "#ffffff",
+          "on-surface": "#1b1c1d",
+          "tertiary-fixed": "#e1e3e4",
+          "on-tertiary-container": "#8f9192",
+          "on-secondary-fixed": "#001f27",
+          "inverse-on-surface": "#f2f0f2",
+          "error-container": "#ffdad6",
+          "surface-variant": "#e4e2e3",
+          "surface-container-highest": "#e4e2e3",
+          "on-primary-fixed": "#0b1d2d",
+          "on-primary-container": "#8192a7",
+          "primary-fixed-dim": "#b7c8de"
+        },
+        borderRadius: {
+          DEFAULT: "0.125rem",
+          lg: "0.25rem",
+          xl: "0.5rem",
+          full: "0.75rem"
+        },
+        spacing: {
+          "stack-sm": "12px",
+          "gutter": "24px",
+          "unit": "8px",
+          "section-padding": "80px",
+          "container-max": "1280px",
+          "stack-md": "24px",
+          "stack-lg": "48px"
+        },
+        fontFamily: {
+          h2: ["Manrope"],
+          "body-md": ["Inter"],
+          h3: ["Manrope"],
+          "body-lg": ["Inter"],
+          h1: ["Manrope"],
+          "label-caps": ["Inter"]
+        },
+        fontSize: {
+          h2: ["36px", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
+          "body-md": ["16px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+          h3: ["24px", { lineHeight: "1.4", letterSpacing: "0", fontWeight: "600" }],
+          "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+          h1: ["48px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }],
+          "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.05em", fontWeight: "600" }]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  body { background-color: #fbf9fa; }
+  body { min-height: max(884px, 100dvh); }
+</style>
+</head>
+<body class="font-body-md text-on-surface">
+
+<!-- TopAppBar -->
+<header class="bg-white sticky top-0 z-[100] border-b border-[#E2E8F0] shadow-[0px_10px_30px_rgba(26,43,60,0.05)]">
+  <div class="flex justify-between items-center w-full px-6 py-4 max-w-[1280px] mx-auto">
+    <div class="flex items-center gap-4">
+      <span class="material-symbols-outlined text-slate-900 cursor-pointer active:opacity-70">menu</span>
+      <a href="index.html" class="text-xl font-bold text-[#1A2B3C] font-['Manrope'] tracking-tight">JC Labs</a>
+    </div>
+    <nav class="hidden md:flex gap-8 items-center">
+      <a class="font-['Manrope'] font-semibold tracking-tight text-[#1A2B3C] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2" href="index.html">Home</a>
+      <a class="font-['Manrope'] font-semibold tracking-tight text-[#00B4D8] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2 border-b-2 border-[#00B4D8]" href="projects.html">Our AI Projects</a>
+      <a class="font-['Manrope'] font-semibold tracking-tight text-[#1A2B3C] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2" href="process.html">Our Process</a>
+      <a class="font-['Manrope'] font-semibold tracking-tight text-[#1A2B3C] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2" href="index.html#contact">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="index.html#contact" class="hidden md:block bg-[#00B4D8] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition-all">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-[1280px] mx-auto px-6">
+
+  <!-- Hero Section -->
+  <section class="py-20 md:py-32 flex flex-col items-center text-center">
+    <div class="inline-block px-4 py-1.5 bg-secondary-fixed text-on-secondary-container rounded-full font-label-caps text-label-caps mb-8">
+      PRODUCTION AI APPLICATIONS
+    </div>
+    <h1 class="font-h1 text-h1 text-primary mb-6 max-w-4xl">
+      Our <span class="text-[#00B4D8]">AI Projects</span>
+    </h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+      Real-world AI applications solving complex business problems. From customer automation to HR intelligence to marketplace innovation.
+    </p>
+  </section>
+
+  <!-- ChatRecept Section -->
+  <section class="py-16 mb-20 border-b border-[#E2E8F0]">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+      <div class="md:col-span-6 order-2 md:order-1">
+        <div class="inline-block px-4 py-1.5 bg-secondary-fixed text-on-secondary-container rounded-full font-label-caps text-label-caps mb-6">
+          AI BUSINESS AUTOMATION
+        </div>
+        <h2 class="font-h2 text-h2 text-primary mb-4">ChatRecept</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+          An all-in-one AI platform that automates customer interactions across WhatsApp, Telegram, and websites. Three integrated products working seamlessly together to transform how businesses communicate with customers.
+        </p>
+
+        <h3 class="font-h3 text-h3 text-primary mb-4 mt-8">The Three Components</h3>
+
+        <div class="space-y-4 mb-8">
+          <div class="border-l-4 border-[#00B4D8] pl-4">
+            <h4 class="font-semibold text-primary mb-2">🤖 AI Frontdesk</h4>
+            <p class="text-on-surface-variant">
+              Intelligent chatbot that answers customer questions 24/7, qualifies leads, and captures sales across all channels. Handles 100+ messages daily automatically while learning your business rules in real-time.
+            </p>
+          </div>
+
+          <div class="border-l-4 border-[#00B4D8] pl-4">
+            <h4 class="font-semibold text-primary mb-2">🌐 WebsiteBot</h4>
+            <p class="text-on-surface-variant">
+              AI-powered website builder that generates professional, conversion-optimized websites instantly through simple conversation. Get your business online in 5 minutes, not 5 months.
+            </p>
+          </div>
+
+          <div class="border-l-4 border-[#00B4D8] pl-4">
+            <h4 class="font-semibold text-primary mb-2">📋 AI Secretariat</h4>
+            <p class="text-on-surface-variant">
+              Compliance and legal automation for business documentation, ACRA filings, contracts, and regulatory requirements. Automate the boring, focus on growth.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="font-h3 text-h3 text-primary mb-4">Key Capabilities</h3>
+        <ul class="space-y-2 mb-8">
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+            <span class="text-on-surface-variant">Multi-channel conversations (WhatsApp, Telegram, Web, Email)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+            <span class="text-on-surface-variant">AI-powered lead scoring and qualification</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+            <span class="text-on-surface-variant">Real-time conversation analytics and insights</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+            <span class="text-on-surface-variant">Natural language understanding in 50+ languages</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+            <span class="text-on-surface-variant">Personalized AI that learns your business rules</span>
+          </li>
+        </ul>
+
+        <h3 class="font-h3 text-h3 text-primary mb-4">Perfect For</h3>
+        <p class="text-on-surface-variant mb-6">
+          Restaurants & food businesses, retail shops, service providers (salons, fitness, clinics), real estate agents, consultants, e-commerce—any business handling customer inquiries.
+        </p>
+
+        <a href="https://github.com/mjoechia/chatrecept" target="_blank" class="inline-flex items-center gap-2 bg-[#00B4D8] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all">
+          View on GitHub
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="md:col-span-6 order-1 md:order-2">
+        <div class="bg-gradient-to-br from-[#1A2B3C] to-[#041627] rounded-xl h-80 flex items-center justify-center relative overflow-hidden">
+          <img src="images/projects/chatrecept/chatrecept-01-dashboard.jpg" alt="ChatRecept Dashboard" class="absolute inset-0 w-full h-full object-cover opacity-0" />
+          <div class="text-center relative z-10">
+            <span class="material-symbols-outlined text-[#00B4D8] text-6xl block mb-4">smart_toy</span>
+            <p class="text-white text-lg font-semibold">ChatRecept Dashboard</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NexaMatrix HRMS Section -->
+  <section class="py-16 mb-20 border-b border-[#E2E8F0]">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+      <div class="md:col-span-6">
+        <div class="bg-gradient-to-br from-[#00B4D8] to-[#0099cc] rounded-xl h-80 flex items-center justify-center relative overflow-hidden">
+          <img src="images/projects/nexamatrix/nexamatrix-01-heatmap.jpg" alt="NexaMatrix Attendance Heatmap" class="absolute inset-0 w-full h-full object-cover opacity-0" />
+          <div class="text-center relative z-10">
+            <span class="material-symbols-outlined text-white text-6xl block mb-4">heat_map</span>
+            <p class="text-white text-lg font-semibold">Attendance Heatmap</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:col-span-6">
+        <div class="inline-block px-4 py-1.5 bg-secondary-fixed text-on-secondary-container rounded-full font-label-caps text-label-caps mb-6">
+          HR MANAGEMENT × AI SECURITY
+        </div>
+        <h2 class="font-h2 text-h2 text-primary mb-4">nexamatrix HRMS</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+          Enterprise-grade HR management system with stunning visual analytics and AI-powered security. Manage your entire workforce with intelligent automation, from attendance to payroll to compliance.
+        </p>
+
+        <h3 class="font-h3 text-h3 text-primary mb-4">The Signature Feature: Attendance Heatmap</h3>
+        <p class="text-on-surface-variant mb-6">
+          See your entire workforce attendance at a glance with our color-coded heatmap visualization. Green for present, yellow for partial, red for absent—instantly identify attendance patterns, spot trends, and manage your team proactively.
+        </p>
+
+        <h3 class="font-h3 text-h3 text-primary mb-4">Core Features</h3>
+        <ul class="space-y-2 mb-8">
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+            <span class="text-on-surface-variant"><strong>AI Location-Based Login</strong> — GPS verification ensures security and prevents unauthorized access</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+            <span class="text-on-surface-variant"><strong>Attendance Management</strong> — One-tap clock-in/out with automatic GPS capture and timestamp</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+            <span class="text-on-surface-variant"><strong>Leave Management</strong> — Real-time balance tracking, instant approvals, multiple leave types</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+            <span class="text-on-surface-variant"><strong>Payroll Processing</strong> — Automatic CPF calculations, allowances, deductions, compliant payslips</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+            <span class="text-on-surface-variant"><strong>Analytics Dashboard</strong> — Department metrics, attendance trends, payroll summaries</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#00B4D8] flex-shrink-0 mt-1">check_circle</span>
+            <span class="text-on-surface-variant"><strong>Singapore Compliance</strong> — PDPA compliant, automatic CPF calculations, work permit management</span>
+          </li>
+        </ul>
+
+        <h3 class="font-h3 text-h3 text-primary mb-4">Business Impact</h3>
+        <ul class="space-y-2 mb-8 text-sm">
+          <li class="flex items-start gap-2">
+            <span class="text-[#00B4D8]">→</span>
+            <span>Save 10+ hours per week on HR administration</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#00B4D8]">→</span>
+            <span>99%+ accuracy in payroll processing</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#00B4D8]">→</span>
+            <span>Zero attendance disputes with GPS verification</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#00B4D8]">→</span>
+            <span>Instant data-driven insights into workforce patterns</span>
+          </li>
+        </ul>
+
+        <a href="https://github.com/mjoechia/nexahrsoft2" target="_blank" class="inline-flex items-center gap-2 bg-[#00B4D8] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all">
+          View on GitHub
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KhunCaddy Section -->
+  <section class="py-16 mb-20">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+      <div class="md:col-span-6 order-2 md:order-1">
+        <div class="inline-block px-4 py-1.5 bg-secondary-fixed text-on-secondary-container rounded-full font-label-caps text-label-caps mb-6">
+          MARKETPLACE × AI VERIFICATION
+        </div>
+        <h2 class="font-h2 text-h2 text-primary mb-4">KhunCaddy</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+          A trusted companion booking marketplace powered by cutting-edge AI facial recognition and blockchain payments. Think Airbnb for companionship services, with industry-leading trust and security infrastructure.
+        </p>
+
+        <h3 class="font-h3 text-h3 text-primary mb-4">Why KhunCaddy is Different</h3>
+        <p class="text-on-surface-variant mb-6">
+          KhunCaddy solves the trust problem in companion booking. Every user's identity is verified using advanced AI facial recognition—no fake profiles, no surprises. Combined with instant blockchain payments and community governance, it's a marketplace built for the modern era.
+        </p>
+
+        <h3 class="font-h3 text-h3 text-primary mb-4">Key Features</h3>
+        <ul class="space-y-3 mb-8">
+          <li class="border-l-4 border-[#00B4D8] pl-4">
+            <h4 class="font-semibold text-primary mb-1">🔐 AI Face Verification</h4>
+            <p class="text-sm text-on-surface-variant">Every talent verified with cutting-edge facial recognition. No fakes, no scams—just real, verified people.</p>
+          </li>
+          <li class="border-l-4 border-[#00B4D8] pl-4">
+            <h4 class="font-semibold text-primary mb-1">📱 One-Tap Telegram Login</h4>
+            <p class="text-sm text-on-surface-variant">Instant authentication. No passwords. Works via Telegram Mini App or web. Available on desktop and mobile.</p>
+          </li>
+          <li class="border-l-4 border-[#00B4D8] pl-4">
+            <h4 class="font-semibold text-primary mb-1">⚡ Blockchain Payments</h4>
+            <p class="text-sm text-on-surface-variant">Instant TON/Telegram Wallet payments. Global, borderless, with zero chargebacks. No waiting for transfers.</p>
+          </li>
+          <li class="border-l-4 border-[#00B4D8] pl-4">
+            <h4 class="font-semibold text-primary mb-1">⭐ Community Governance</h4>
+            <p class="text-sm text-on-surface-variant">5-star ratings, tier system, and community voting on platform rules. Transparency and trust built-in.</p>
+          </li>
+          <li class="border-l-4 border-[#00B4D8] pl-4">
+            <h4 class="font-semibold text-primary mb-1">💬 Encrypted Chat</h4>
+            <p class="text-sm text-on-surface-variant">Safe, moderated in-app messaging. Stay anonymous, no phone numbers exchanged, built-in safety features.</p>
+          </li>
+          <li class="border-l-4 border-[#00B4D8] pl-4">
+            <h4 class="font-semibold text-primary mb-1">📍 Location Discovery</h4>
+            <p class="text-sm text-on-surface-variant">Browse companions by location, price, and services. Smart filtering makes finding the right match easy.</p>
+          </li>
+        </ul>
+
+        <h3 class="font-h3 text-h3 text-primary mb-4">For Clients</h3>
+        <p class="text-on-surface-variant mb-4 text-sm">
+          Browse verified companions, chat safely, book securely, and pay instantly. Transparent pricing with no hidden fees (just 5% platform fee). Safety features include check-in timers and emergency buttons.
+        </p>
+
+        <h3 class="font-h3 text-h3 text-primary mb-4">For Talents</h3>
+        <p class="text-on-surface-variant mb-8 text-sm">
+          Get verified, build your profile, and start earning instantly. Keep 95% of earnings. Rise through tiers (New → Trusted → Elite → Legend). Full privacy controls and instant payments to your TON wallet.
+        </p>
+
+        <a href="https://github.com/BkkBabe/bkkbabe" target="_blank" class="inline-flex items-center gap-2 bg-[#00B4D8] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all">
+          View on GitHub
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="md:col-span-6 order-1 md:order-2">
+        <div class="bg-gradient-to-br from-[#1A2B3C] to-[#041627] rounded-xl h-80 flex items-center justify-center relative overflow-hidden">
+          <img src="images/projects/khuncaddy/khuncaddy-01-marketplace.jpg" alt="KhunCaddy Marketplace" class="absolute inset-0 w-full h-full object-cover opacity-0" />
+          <div class="text-center relative z-10">
+            <span class="material-symbols-outlined text-[#00B4D8] text-6xl block mb-4">verified_user</span>
+            <p class="text-white text-lg font-semibold">Marketplace Browse</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary Section -->
+  <section class="py-20 bg-surface-bright border border-[#E2E8F0] rounded-2xl px-10 mb-20">
+    <div class="text-center mb-12">
+      <h2 class="font-h2 text-h2 text-primary mb-4">Three Distinct AI Solutions</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        Each project demonstrates advanced AI integration, modern technology, and real business impact. From automating customer service to managing enterprise workflows to building trusted marketplaces.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl p-6 border border-[#E2E8F0]">
+        <span class="material-symbols-outlined text-[#00B4D8] text-4xl block mb-4">smart_toy</span>
+        <h3 class="font-h3 text-h3 text-primary mb-2">ChatRecept</h3>
+        <p class="text-on-surface-variant text-sm mb-4">
+          AI-powered customer communication across WhatsApp, Telegram, and web. Handles 100+ messages daily automatically.
+        </p>
+        <p class="text-xs font-semibold text-[#00B4D8]">AI Frontdesk • WebsiteBot • AI Secretariat</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border border-[#E2E8F0]">
+        <span class="material-symbols-outlined text-[#00B4D8] text-4xl block mb-4">heat_map</span>
+        <h3 class="font-h3 text-h3 text-primary mb-2">nexamatrix HRMS</h3>
+        <p class="text-on-surface-variant text-sm mb-4">
+          Enterprise HR system with stunning Attendance Heatmap and AI location-based security verification.
+        </p>
+        <p class="text-xs font-semibold text-[#00B4D8]">Attendance • Payroll • Leave • Analytics</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border border-[#E2E8F0]">
+        <span class="material-symbols-outlined text-[#00B4D8] text-4xl block mb-4">verified_user</span>
+        <h3 class="font-h3 text-h3 text-primary mb-2">KhunCaddy</h3>
+        <p class="text-on-surface-variant text-sm mb-4">
+          Companion marketplace with AI facial verification and blockchain payments. Trust and transparency built-in.
+        </p>
+        <p class="text-xs font-semibold text-[#00B4D8]">Marketplace • Verification • Blockchain</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#1A2B3C] text-white py-16 px-6">
+  <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+    <div class="col-span-1 md:col-span-1">
+      <div class="text-2xl font-bold mb-6 font-['Manrope']">JC Labs</div>
+      <p class="text-on-primary-container text-sm leading-relaxed">
+        Building enterprise web applications enhanced with intelligent AI. Custom solutions that solve real business problems with cutting-edge technology.
+      </p>
+    </div>
+    <div>
+      <h4 class="font-bold mb-6 text-secondary-container">Services</h4>
+      <ul class="space-y-4 text-sm text-on-primary-container">
+        <li><a class="hover:text-white transition-colors" href="#">Custom Web Development</a></li>
+        <li><a class="hover:text-white transition-colors" href="#">AI Integration</a></li>
+        <li><a class="hover:text-white transition-colors" href="#">HRMS Solutions</a></li>
+        <li><a class="hover:text-white transition-colors" href="#">Marketplace Platforms</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-6 text-secondary-container">Quick Links</h4>
+      <ul class="space-y-4 text-sm text-on-primary-container">
+        <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+        <li><a class="hover:text-white transition-colors" href="projects.html">Our AI Projects</a></li>
+        <li><a class="hover:text-white transition-colors" href="process.html">Development Process</a></li>
+        <li><a class="hover:text-white transition-colors" href="index.html#contact">Get in Touch</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-6 text-secondary-container">Contact Us</h4>
+      <p class="text-sm text-on-primary-container mb-4">Ready to start your web app project? Let's talk.</p>
+      <div class="flex gap-2">
+        <a href="https://wa.me/6586061913" target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#25D366] px-4 py-3 rounded-lg hover:opacity-90 flex items-center justify-center gap-2 font-semibold text-sm text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          WhatsApp
+        </a>
+        <a href="index.html#contact" class="flex-1 bg-[#00B4D8] px-4 py-3 rounded-lg hover:opacity-90 flex items-center justify-center gap-2 font-semibold text-sm text-white">
+          <span class="material-symbols-outlined text-lg">mail</span>
+          Email
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1280px] mx-auto mt-16 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-primary-container">
+    <p>© 2026 JC Labs AI Consultancy. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="#">Terms of Engagement</a>
+      <a href="#">Sovereignty Protocol</a>
+      <a href="#">Global Compliance</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/6586061913" target="_blank" rel="noopener noreferrer"
+  class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-[0px_8px_30px_rgba(37,211,102,0.4)] hover:scale-105 active:scale-95 transition-all group"
+  aria-label="Chat on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 flex-shrink-0">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  <span class="text-sm font-bold whitespace-nowrap">Chat with us</span>
+</a>
+
+<!-- Mobile Bottom Nav -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md z-40 border-t border-[#E2E8F0] flex justify-around items-center px-4 py-3 shadow-[0px_-4px_20px_rgba(26,43,60,0.03)]" style="padding-bottom: max(12px, env(safe-area-inset-bottom))">
+  <a class="flex flex-col items-center justify-center text-[#1A2B3C] opacity-60 scale-95 active:scale-90 transition-transform" href="index.html">
+    <span class="material-symbols-outlined">home</span>
+    <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Home</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-[#00B4D8] font-bold scale-95 active:scale-90 transition-transform" href="projects.html">
+    <span class="material-symbols-outlined">auto_awesome</span>
+    <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Projects</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-[#1A2B3C] opacity-60 scale-95 active:scale-90 transition-transform" href="process.html">
+    <span class="material-symbols-outlined">architecture</span>
+    <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Process</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-[#1A2B3C] opacity-60 scale-95 active:scale-90 transition-transform" href="index.html#contact">
+    <span class="material-symbols-outlined">mail</span>
+    <span class="font-['Manrope'] text-[11px] font-medium uppercase tracking-wider mt-1">Contact</span>
+  </a>
+</div>
+
+</body>
+</html>
