@@ -1,5 +1,0 @@
-:80 {
-  root * .
-  file_server
-  encode gzip
-}
