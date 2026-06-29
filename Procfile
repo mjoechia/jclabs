@@ -1,1 +1,1 @@
-web: caddy run --config Caddyfile.default
+web: python -m http.server $PORT
