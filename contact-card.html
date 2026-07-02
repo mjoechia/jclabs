@@ -5,7 +5,6 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Joe Chia - Contact Card | JC Labs</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style>
@@ -118,7 +117,7 @@
         <div class="bg-white border border-[#E2E8F0] rounded-2xl p-8 shadow-[0px_10px_30px_rgba(26,43,60,0.05)] flex flex-col items-center justify-center">
           <div class="mb-6">
             <p class="text-sm text-on-surface-variant text-center mb-4">Scan to save contact</p>
-            <div id="qrcode" class="flex items-center justify-center"></div>
+            <img id="qrcode" src="" alt="Contact QR Code" class="w-64 h-64" />
           </div>
           <div class="w-full">
             <button onclick="downloadQR()" class="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
@@ -145,7 +144,7 @@
 </footer>
 
 <script>
-  // Generate QR Code from vCard content
+  // vCard content
   const vcardContent = `BEGIN:VCARD
 VERSION:3.0
 N:Chia;Joe;;;
@@ -158,24 +157,25 @@ URL:https://jclabs.online
 X-WECHAT:JCNetworth
 END:VCARD`;
 
-  // Create QR Code
-  const qrcode = new QRCode(document.getElementById("qrcode"), {
-    text: vcardContent,
-    width: 256,
-    height: 256,
-    colorDark: "#000000",
-    colorLight: "#FFFFFF",
-    correctLevel: QRCode.CorrectLevel.H
-  });
+  // Generate QR Code using API
+  function generateQRCode() {
+    const encodedText = encodeURIComponent(vcardContent);
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=${encodedText}`;
+    document.getElementById('qrcode').src = qrUrl;
+  }
 
   // Download QR Code
   function downloadQR() {
-    const canvas = document.querySelector('#qrcode canvas');
+    const encodedText = encodeURIComponent(vcardContent);
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=512x512&data=${encodedText}`;
     const link = document.createElement('a');
-    link.href = canvas.toDataURL();
+    link.href = qrUrl;
     link.download = 'joe-contact-qr.png';
     link.click();
   }
+
+  // Generate QR code on page load
+  window.addEventListener('DOMContentLoaded', generateQRCode);
 </script>
 
 </body>
