@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Joe Chia - Contact Card | JC Labs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  body { background-color: #fbf9fa; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+</style>
+</head>
+<body class="font-body-md text-on-surface">
+
+<!-- Header -->
+<header class="bg-white sticky top-0 z-[100] border-b border-[#E2E8F0] shadow-[0px_10px_30px_rgba(26,43,60,0.05)]">
+  <div class="flex justify-between items-center w-full px-6 py-4 max-w-[1280px] mx-auto">
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="text-xl font-bold text-[#1A2B3C] font-['Manrope'] tracking-tight">JC Labs</a>
+    </div>
+    <div>
+      <a href="index.html" class="text-[#1A2B3C] hover:text-[#00B4D8] transition-colors">← Back to Home</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-[1280px] mx-auto px-6">
+
+  <!-- Contact Card Section -->
+  <section class="py-20 md:py-32">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="font-h1 text-4xl md:text-5xl text-primary mb-4">Joe Chia</h1>
+        <p class="text-lg text-on-surface-variant">Software Developer & Crypto Trader</p>
+        <p class="text-sm text-on-surface-variant">JC Labs</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        <!-- Contact Information -->
+        <div class="space-y-8">
+          <div class="bg-white border border-[#E2E8F0] rounded-2xl p-8 shadow-[0px_10px_30px_rgba(26,43,60,0.05)]">
+            <h2 class="font-h3 text-h3 text-primary mb-8">Contact Information</h2>
+
+            <div class="space-y-6">
+              <!-- Phone -->
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-[#00B4D8] text-2xl flex-shrink-0">phone</span>
+                <div>
+                  <p class="text-xs font-label-caps text-on-surface-variant uppercase tracking-wider mb-1">Phone</p>
+                  <a href="tel:+6586061913" class="text-primary font-semibold hover:text-[#00B4D8] transition-colors">
+                    +65 8606 1913
+                  </a>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-[#00B4D8] text-2xl flex-shrink-0">mail</span>
+                <div>
+                  <p class="text-xs font-label-caps text-on-surface-variant uppercase tracking-wider mb-1">Email</p>
+                  <a href="mailto:mjoechia@gmail.com" class="text-primary font-semibold hover:text-[#00B4D8] transition-colors">
+                    mjoechia@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Website -->
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-[#00B4D8] text-2xl flex-shrink-0">language</span>
+                <div>
+                  <p class="text-xs font-label-caps text-on-surface-variant uppercase tracking-wider mb-1">Website</p>
+                  <a href="https://jclabs.online" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:text-[#00B4D8] transition-colors">
+                    jclabs.online
+                  </a>
+                </div>
+              </div>
+
+              <!-- WeChat -->
+              <div class="flex items-start gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00B4D8" class="w-6 h-6 flex-shrink-0">
+                  <path d="M12 2C6.48 2 2 5.58 2 10c0 1.54.36 3 .97 4.29-.06 1.95-.6 4.22-2.04 5.56.5-1.23 1.11-2.83 1.21-4.02C2.62 17.3 2 18.61 2 20c0 4.42 4.48 8 10 8 5.52 0 10-3.58 10-8s-4.48-8-10-8zm4-3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm-8 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"/>
+                </svg>
+                <div>
+                  <p class="text-xs font-label-caps text-on-surface-variant uppercase tracking-wider mb-1">WeChat</p>
+                  <p class="text-primary font-semibold">JCNetworth</p>
+                </div>
+              </div>
+
+              <!-- WhatsApp -->
+              <div class="flex items-start gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00B4D8" class="w-6 h-6 flex-shrink-0">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <div>
+                  <p class="text-xs font-label-caps text-on-surface-variant uppercase tracking-wider mb-1">WhatsApp</p>
+                  <a href="https://wa.me/6586061913" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:text-[#00B4D8] transition-colors">
+                    +65 8606 1913
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download vCard Button -->
+          <a href="joe.vcf" download class="block w-full bg-[#00B4D8] text-white px-6 py-4 rounded-lg font-bold shadow-[0px_10px_30px_rgba(0,180,216,0.2)] hover:opacity-90 transition-all flex items-center justify-center gap-3">
+            <span class="material-symbols-outlined">download</span>
+            Download Contact Card
+          </a>
+        </div>
+
+        <!-- QR Code -->
+        <div class="bg-white border border-[#E2E8F0] rounded-2xl p-8 shadow-[0px_10px_30px_rgba(26,43,60,0.05)] flex flex-col items-center justify-center">
+          <div class="mb-6">
+            <p class="text-sm text-on-surface-variant text-center mb-4">Scan to save contact</p>
+            <div id="qrcode" class="flex items-center justify-center"></div>
+          </div>
+          <div class="w-full">
+            <button onclick="downloadQR()" class="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined">image</span>
+              Download QR Code
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#1A2B3C] text-white py-16 px-6 mt-20">
+  <div class="max-w-[1280px] mx-auto text-center">
+    <p class="text-on-primary-container text-sm mb-4">
+      Joe Chia | Software Developer & Crypto Trader
+    </p>
+    <p>© 2024 JC Labs AI Consultancy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Generate QR Code from vCard content
+  const vcardContent = `BEGIN:VCARD
+VERSION:3.0
+N:Chia;Joe;;;
+FN:Joe Chia
+ORG:JC Labs
+TITLE:Software Developer/ Crypto Trader
+TEL;TYPE=CELL:+6586061913
+EMAIL:mjoechia@gmail.com
+URL:https://jclabs.online
+X-WECHAT:JCNetworth
+END:VCARD`;
+
+  // Create QR Code
+  const qrcode = new QRCode(document.getElementById("qrcode"), {
+    text: vcardContent,
+    width: 256,
+    height: 256,
+    colorDark: "#000000",
+    colorLight: "#FFFFFF",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+
+  // Download QR Code
+  function downloadQR() {
+    const canvas = document.querySelector('#qrcode canvas');
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL();
+    link.download = 'joe-contact-qr.png';
+    link.click();
+  }
+</script>
+
+</body>
+</html>
