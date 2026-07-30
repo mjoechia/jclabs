@@ -353,12 +353,18 @@
       <p class="text-xs text-on-surface-variant mt-4 text-center">Scan to save contact information</p>
     </div>
 
-    <div class="flex gap-3">
-      <button onclick="downloadQRCode()" class="flex-1 bg-[#00B4D8] text-white px-4 py-3 rounded-lg font-semibold hover:opacity-90 transition-all flex items-center justify-center gap-2">
-        <span class="material-symbols-outlined">download</span>
-        Download QR
-      </button>
-      <button onclick="closeQRModal()" class="flex-1 bg-gray-200 text-gray-700 px-4 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all">
+    <div class="space-y-3">
+      <div class="flex gap-3">
+        <button onclick="refreshQRCode()" class="flex-1 bg-green-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-green-700 transition-all flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined">refresh</span>
+          Refresh vCard
+        </button>
+        <button onclick="downloadQRCode()" class="flex-1 bg-[#00B4D8] text-white px-4 py-3 rounded-lg font-semibold hover:opacity-90 transition-all flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined">download</span>
+          Download QR
+        </button>
+      </div>
+      <button onclick="closeQRModal()" class="w-full bg-gray-200 text-gray-700 px-4 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all">
         Close
       </button>
     </div>
@@ -533,6 +539,27 @@ END:VCARD`;
 
   function closeQRModal() {
     document.getElementById('qr-modal').classList.add('hidden');
+  }
+
+  function refreshQRCode() {
+    const { name, title, email, phone } = currentVCardData;
+
+    // Regenerate vCard with current data
+    const vcard = generateVCardText(name, title, email || '', phone || '');
+    const encodedVCard = encodeURIComponent(vcard);
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=512x512&data=${encodedVCard}`;
+
+    // Update QR code display
+    document.getElementById('qr-image').src = qrUrl;
+    document.getElementById('qr-contact-name').textContent = `${name} - ${title}`;
+
+    // Show success feedback
+    const button = event.target;
+    const originalText = button.innerHTML;
+    button.innerHTML = '<span class="material-symbols-outlined">done</span> Updated!';
+    setTimeout(() => {
+      button.innerHTML = originalText;
+    }, 2000);
   }
 
   function downloadQRCode() {
