@@ -113,14 +113,18 @@
       <button class="material-symbols-outlined text-slate-900 dark:text-slate-50 cursor-pointer active:opacity-70">menu</button>
       <a href="index.html" class="text-xl font-bold text-[#1A2B3C] dark:text-[#E2E8F0] font-['Manrope'] tracking-tight">JC Labs</a>
     </div>
-    <div class="hidden md:flex items-center space-gap-gutter">
+    <div class="hidden md:flex items-center space-gap-gutter gap-4">
       <nav class="flex gap-8 px-6">
-        <a class="text-[#1A2B3C] font-semibold text-sm hover:bg-slate-50 transition-colors px-2 py-1" href="index.html">Home</a>
-        <a class="text-[#1A2B3C] font-semibold text-sm hover:bg-slate-50 transition-colors px-2 py-1" href="process.html">Our Process</a>
-        <a class="text-[#00B4D8] font-semibold text-sm px-2 py-1 border-b-2 border-[#00B4D8]" href="team.html">Team</a>
-        <a class="text-[#1A2B3C] font-semibold text-sm hover:bg-slate-50 transition-colors px-2 py-1" href="index.html#contact">Contact</a>
+        <a class="text-[#1A2B3C] font-semibold text-sm hover:bg-slate-50 transition-colors px-2 py-1" href="index.html" data-en="Home" data-cn="首页">Home</a>
+        <a class="text-[#1A2B3C] font-semibold text-sm hover:bg-slate-50 transition-colors px-2 py-1" href="process.html" data-en="Our Process" data-cn="我们的流程">Our Process</a>
+        <a class="text-[#00B4D8] font-semibold text-sm px-2 py-1 border-b-2 border-[#00B4D8]" href="team.html" data-en="Team" data-cn="团队">Team</a>
+        <a class="text-[#1A2B3C] font-semibold text-sm hover:bg-slate-50 transition-colors px-2 py-1" href="index.html#contact" data-en="Contact" data-cn="联系">Contact</a>
       </nav>
-      <a href="index.html#contact" class="bg-[#00B4D8] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition-all">Get Started</a>
+      <button id="lang-toggle" class="flex items-center gap-1 bg-gray-100 hover:bg-gray-200 text-[#1A2B3C] px-3 py-2 rounded-lg font-semibold text-sm transition-all" title="Toggle Language">
+        <span class="material-symbols-outlined text-lg">language</span>
+        <span id="lang-text">EN</span>
+      </button>
+      <a href="index.html#contact" class="bg-[#00B4D8] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition-all" data-en="Get Started" data-cn="开始使用">Get Started</a>
     </div>
   </div>
 </header>
@@ -132,10 +136,10 @@
     <div class="mb-stack-md text-center">
       <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-fixed text-primary mb-4 rounded-full">
         <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">group</span>
-        <span class="font-label-caps text-label-caps">Our Leadership</span>
+        <span class="font-label-caps text-label-caps" data-en="Our Leadership" data-cn="我们的领导层">Our Leadership</span>
       </div>
-      <h1 class="font-h1 text-h1 text-primary-container mb-4">Management Team</h1>
-      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+      <h1 class="font-h1 text-h1 text-primary-container mb-4" data-en="Management Team" data-cn="管理团队">Management Team</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto" data-en="Experienced leaders driving growth and innovation across global markets." data-cn="经验丰富的领导者推动全球市场的增长和创新。">
         Experienced leaders driving growth and innovation across global markets.
       </p>
     </div>
@@ -253,5 +257,6 @@
   </a>
 </div>
 
+<script src="lang.js"></script>
 </body>
 </html>
