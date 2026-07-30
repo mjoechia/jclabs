@@ -145,6 +145,10 @@
                 <p class="text-xs text-on-surface-variant mt-1">mjoechia@gmail.com | +65 8606 1913</p>
               </div>
               <div class="flex gap-2">
+                <button onclick="viewQRCode('Joe Chia', 'Singapore Country Manager', 'mjoechia@gmail.com', '+6586061913')" class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-200 transition-all flex items-center gap-2">
+                  <span class="material-symbols-outlined text-lg">qr_code_2</span>
+                  QR Code
+                </button>
                 <button onclick="downloadVCard('joe-chia', 'Joe Chia', 'Singapore Country Manager', 'mjoechia@gmail.com', '+6586061913')" class="bg-[#00B4D8] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-all flex items-center gap-2">
                   <span class="material-symbols-outlined text-lg">download</span>
                   Download
@@ -160,6 +164,10 @@
                 <p class="text-xs text-on-surface-variant mt-1">Regional contact in Greater China</p>
               </div>
               <div class="flex gap-2">
+                <button onclick="viewQRCode('蘇家菘', 'Taiwan Country Manager', '', '')" class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-200 transition-all flex items-center gap-2">
+                  <span class="material-symbols-outlined text-lg">qr_code_2</span>
+                  QR Code
+                </button>
                 <button onclick="downloadVCard('su-jiasong', '蘇家菘', 'Taiwan Country Manager', '', '')" class="bg-[#00B4D8] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-all flex items-center gap-2">
                   <span class="material-symbols-outlined text-lg">download</span>
                   Download
@@ -280,6 +288,34 @@
 
 </main>
 
+<!-- QR Code Modal -->
+<div id="qr-modal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-xl p-8 max-w-md w-full shadow-2xl">
+    <div class="flex items-center justify-between mb-6">
+      <h3 class="text-xl font-bold text-[#1A2B3C]">Contact QR Code</h3>
+      <button onclick="closeQRModal()" class="text-gray-500 hover:text-gray-700">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <div class="bg-gray-50 rounded-lg p-6 mb-6 flex flex-col items-center">
+      <p class="text-sm text-on-surface-variant mb-4 text-center" id="qr-contact-name">Loading...</p>
+      <img id="qr-image" src="" alt="QR Code" class="w-64 h-64 border-2 border-[#00B4D8]" />
+      <p class="text-xs text-on-surface-variant mt-4 text-center">Scan to save contact information</p>
+    </div>
+
+    <div class="flex gap-3">
+      <button onclick="downloadQRCode()" class="flex-1 bg-[#00B4D8] text-white px-4 py-3 rounded-lg font-semibold hover:opacity-90 transition-all flex items-center justify-center gap-2">
+        <span class="material-symbols-outlined">download</span>
+        Download QR
+      </button>
+      <button onclick="closeQRModal()" class="flex-1 bg-gray-200 text-gray-700 px-4 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
 <script>
   // Check authentication
   function checkAuth() {
@@ -356,6 +392,57 @@ END:VCARD`;
 
     alert('vCard created and downloaded successfully!');
   }
+
+  // QR Code Management Functions
+  let currentVCardData = {};
+
+  function generateVCardText(name, title, email, phone) {
+    return `BEGIN:VCARD
+VERSION:3.0
+N:${name.split(' ').slice(-1)[0]};${name.split(' ').slice(0, -1).join(' ')};;;
+FN:${name}
+TITLE:${title}
+${email ? `EMAIL:${email}` : ''}
+${phone ? `TEL;TYPE=CELL:${phone}` : ''}
+ORG:JC Labs
+URL:https://jclabs.online
+END:VCARD`;
+  }
+
+  function viewQRCode(name, title, email, phone) {
+    currentVCardData = { name, title, email, phone };
+    const vcard = generateVCardText(name, title, email, phone);
+    const encodedVCard = encodeURIComponent(vcard);
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=512x512&data=${encodedVCard}`;
+
+    document.getElementById('qr-contact-name').textContent = `${name} - ${title}`;
+    document.getElementById('qr-image').src = qrUrl;
+    document.getElementById('qr-modal').classList.remove('hidden');
+  }
+
+  function closeQRModal() {
+    document.getElementById('qr-modal').classList.add('hidden');
+  }
+
+  function downloadQRCode() {
+    const { name, title } = currentVCardData;
+    const filename = name.toLowerCase().replace(/\s+/g, '-');
+    const vcard = generateVCardText(name, title, currentVCardData.email || '', currentVCardData.phone || '');
+    const encodedVCard = encodeURIComponent(vcard);
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=512x512&data=${encodedVCard}`;
+
+    const link = document.createElement('a');
+    link.href = qrUrl;
+    link.download = `${filename}-contact-qr.png`;
+    link.click();
+  }
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeQRModal();
+    }
+  });
 
   // Run auth check on load
   window.addEventListener('load', checkAuth);
