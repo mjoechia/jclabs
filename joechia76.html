@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JC Labs | Admin Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  body { background: linear-gradient(135deg, #1a2b3c 0%, #041627 100%); min-height: 100vh; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .login-card {
+    box-shadow: 0 20px 60px rgba(0, 180, 216, 0.15);
+    backdrop-filter: blur(10px);
+  }
+  .glow-input:focus {
+    box-shadow: 0 0 20px rgba(0, 180, 216, 0.3);
+  }
+</style>
+</head>
+<body class="font-body-md text-white">
+
+<main class="min-h-screen flex flex-col items-center justify-center px-6 py-12">
+  <div class="max-w-md w-full">
+    <!-- Logo -->
+    <div class="text-center mb-12">
+      <a href="index.html" class="text-3xl font-bold text-[#00B4D8] font-['Manrope'] tracking-tight inline-block mb-6">JC Labs</a>
+      <h1 class="text-2xl font-bold text-white mb-2">Secure Access</h1>
+      <p class="text-sm text-gray-300">Management Portal</p>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-card bg-slate-800/40 border border-slate-700/50 rounded-2xl p-8">
+      <form id="login-form" class="space-y-6">
+        <!-- Email Field -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-300 mb-2 uppercase tracking-wider">Email Address</label>
+          <div class="flex items-center gap-3 bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 focus-within:border-[#00B4D8] transition-all">
+            <span class="material-symbols-outlined text-[#00B4D8] text-lg">mail</span>
+            <input
+              id="email"
+              type="email"
+              required
+              placeholder="Enter your email"
+              class="flex-1 bg-transparent text-white placeholder-gray-500 focus:outline-none text-sm"
+            />
+          </div>
+        </div>
+
+        <!-- Password Field -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-300 mb-2 uppercase tracking-wider">Password</label>
+          <div class="flex items-center gap-3 bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 focus-within:border-[#00B4D8] transition-all">
+            <span class="material-symbols-outlined text-[#00B4D8] text-lg">lock</span>
+            <input
+              id="password"
+              type="password"
+              required
+              placeholder="Enter your password"
+              class="flex-1 bg-transparent text-white placeholder-gray-500 focus:outline-none text-sm"
+            />
+          </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="hidden p-4 bg-red-900/30 border border-red-700/50 rounded-lg">
+          <p class="text-sm text-red-200 flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">error</span>
+            <span id="error-text">Invalid credentials. Please try again.</span>
+          </p>
+        </div>
+
+        <!-- Login Button -->
+        <button
+          type="submit"
+          class="w-full bg-gradient-to-r from-[#00B4D8] to-[#0099cc] text-white py-3 rounded-lg font-bold shadow-lg hover:shadow-[0px_10px_30px_rgba(0,180,216,0.3)] active:scale-95 transition-all flex items-center justify-center gap-2 uppercase tracking-wider text-sm"
+        >
+          <span class="material-symbols-outlined">login</span>
+          Sign In
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <div class="relative my-8">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t border-slate-700"></div>
+        </div>
+        <div class="relative flex justify-center text-sm">
+          <span class="px-2 bg-slate-800/40 text-gray-400">OR</span>
+        </div>
+      </div>
+
+      <!-- Back to Home -->
+      <a href="index.html" class="w-full block text-center px-6 py-3 rounded-lg font-semibold text-gray-300 hover:text-white border border-slate-700 hover:border-[#00B4D8] transition-all">
+        Back to Home
+      </a>
+    </div>
+
+    <!-- Security Notice -->
+    <div class="mt-8 p-4 bg-blue-900/20 border border-blue-700/30 rounded-lg">
+      <p class="text-xs text-blue-200 text-center">
+        <span class="material-symbols-outlined text-sm align-middle">info</span> Secure connection. Your credentials are encrypted.
+      </p>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Hash function for password verification
+  async function hashPassword(str) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(str);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  // Credentials (hashed)
+  const validEmail = 'mjoechia@gmail.com';
+  const validPasswordHash = '3e4c5d8f2a1b9c6e7d5a3f2c8b9e1a4d7c5b3a9e2f8d1c6b4a9e3f7c5b2a1e';
+
+  document.getElementById('login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const errorDiv = document.getElementById('error-message');
+    const errorText = document.getElementById('error-text');
+    const btn = e.target.querySelector('button[type="submit"]');
+
+    // Show loading state
+    btn.disabled = true;
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin">autorenew</span> Verifying...';
+
+    try {
+      // Simulate network delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      // Hash the entered password
+      const enteredPasswordHash = await hashPassword(password);
+
+      // Verify credentials
+      if (email === validEmail && enteredPasswordHash === validPasswordHash) {
+        // Set session token
+        const token = btoa(email + ':' + Date.now());
+        sessionStorage.setItem('adminToken', token);
+        sessionStorage.setItem('adminEmail', email);
+
+        // Redirect to dashboard
+        window.location.href = 'dashboard.html';
+      } else {
+        // Show error
+        errorDiv.classList.remove('hidden');
+        errorText.textContent = 'Invalid email or password. Please try again.';
+        btn.disabled = false;
+        btn.innerHTML = '<span class="material-symbols-outlined">login</span> Sign In';
+
+        // Clear password field
+        document.getElementById('password').value = '';
+      }
+    } catch (err) {
+      console.error('Auth error:', err);
+      errorDiv.classList.remove('hidden');
+      errorText.textContent = 'An error occurred. Please try again.';
+      btn.disabled = false;
+      btn.innerHTML = '<span class="material-symbols-outlined">login</span> Sign In';
+    }
+  });
+
+  // Check if already logged in
+  window.addEventListener('load', () => {
+    if (sessionStorage.getItem('adminToken')) {
+      window.location.href = 'dashboard.html';
+    }
+  });
+</script>
+
+</body>
+</html>
