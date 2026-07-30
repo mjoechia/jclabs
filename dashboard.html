@@ -529,12 +529,46 @@ END:VCARD`;
 
   function viewQRCode(name, title, email, phone, cardId = null) {
     currentCardId = cardId;
-    currentVCardData = { name, title, email, phone };
-    const vcard = generateVCardText(name, title, email, phone);
+
+    // Always fetch latest data from localStorage/display
+    let latestName, latestTitle, latestEmail, latestPhone;
+
+    if (cardId === 'joe') {
+      const saved = localStorage.getItem('joe-chia-contact');
+      if (saved) {
+        ({ name: latestName, title: latestTitle, email: latestEmail, phone: latestPhone } = JSON.parse(saved));
+      } else {
+        latestName = document.getElementById('joe-name').textContent;
+        latestTitle = document.getElementById('joe-title').textContent;
+        latestEmail = 'mjoechia@gmail.com';
+        latestPhone = '+6586061913';
+      }
+    } else if (cardId === 'taiwan') {
+      const saved = localStorage.getItem('su-jiasong-contact');
+      if (saved) {
+        ({ name: latestName, title: latestTitle, email: latestEmail, phone: latestPhone } = JSON.parse(saved));
+      } else {
+        latestName = document.getElementById('taiwan-name').textContent;
+        latestTitle = document.getElementById('taiwan-title').textContent;
+        latestEmail = '';
+        latestPhone = '';
+      }
+    } else {
+      latestName = name;
+      latestTitle = title;
+      latestEmail = email;
+      latestPhone = phone;
+    }
+
+    // Update currentVCardData with latest data
+    currentVCardData = { name: latestName, title: latestTitle, email: latestEmail, phone: latestPhone };
+
+    // Generate QR code with latest data
+    const vcard = generateVCardText(latestName, latestTitle, latestEmail, latestPhone);
     const encodedVCard = encodeURIComponent(vcard);
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=512x512&data=${encodedVCard}`;
 
-    document.getElementById('qr-contact-name').textContent = `${name} - ${title}`;
+    document.getElementById('qr-contact-name').textContent = `${latestName} - ${latestTitle}`;
     document.getElementById('qr-image').src = qrUrl;
     document.getElementById('qr-modal').classList.remove('hidden');
   }
