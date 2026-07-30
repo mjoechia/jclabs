@@ -149,7 +149,7 @@
                   <span class="material-symbols-outlined text-lg">edit</span>
                   Edit
                 </button>
-                <button onclick="viewQRCode('Joe Chia', 'Singapore Country Manager', 'mjoechia@gmail.com', '+6586061913')" class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-200 transition-all flex items-center gap-2">
+                <button onclick="viewQRCode(document.getElementById('joe-name').textContent, document.getElementById('joe-title').textContent, 'mjoechia@gmail.com', '+6586061913', 'joe')" class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-200 transition-all flex items-center gap-2">
                   <span class="material-symbols-outlined text-lg">qr_code_2</span>
                   QR Code
                 </button>
@@ -172,7 +172,7 @@
                   <span class="material-symbols-outlined text-lg">edit</span>
                   Edit
                 </button>
-                <button onclick="viewQRCode('蘇家菘', 'Taiwan Country Manager', '', '')" class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-200 transition-all flex items-center gap-2">
+                <button onclick="viewQRCode(document.getElementById('taiwan-name').textContent, document.getElementById('taiwan-title').textContent, '', '', 'taiwan')" class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-200 transition-all flex items-center gap-2">
                   <span class="material-symbols-outlined text-lg">qr_code_2</span>
                   QR Code
                 </button>
@@ -512,6 +512,7 @@ END:VCARD`;
 
   // QR Code Management Functions
   let currentVCardData = {};
+  let currentCardId = null;
 
   function generateVCardText(name, title, email, phone) {
     return `BEGIN:VCARD
@@ -526,7 +527,8 @@ URL:https://jclabs.online
 END:VCARD`;
   }
 
-  function viewQRCode(name, title, email, phone) {
+  function viewQRCode(name, title, email, phone, cardId = null) {
+    currentCardId = cardId;
     currentVCardData = { name, title, email, phone };
     const vcard = generateVCardText(name, title, email, phone);
     const encodedVCard = encodeURIComponent(vcard);
@@ -542,7 +544,36 @@ END:VCARD`;
   }
 
   function refreshQRCode() {
-    const { name, title, email, phone } = currentVCardData;
+    // Get current data from card display or localStorage
+    let name, title, email, phone;
+
+    if (currentCardId === 'joe') {
+      const saved = localStorage.getItem('joe-chia-contact');
+      if (saved) {
+        ({ name, title, email, phone } = JSON.parse(saved));
+      } else {
+        name = document.getElementById('joe-name').textContent;
+        title = document.getElementById('joe-title').textContent;
+        email = 'mjoechia@gmail.com';
+        phone = '+6586061913';
+      }
+    } else if (currentCardId === 'taiwan') {
+      const saved = localStorage.getItem('su-jiasong-contact');
+      if (saved) {
+        ({ name, title, email, phone } = JSON.parse(saved));
+      } else {
+        name = document.getElementById('taiwan-name').textContent;
+        title = document.getElementById('taiwan-title').textContent;
+        email = '';
+        phone = '';
+      }
+    } else {
+      // Fallback to currentVCardData if cardId not set
+      ({ name, title, email, phone } = currentVCardData);
+    }
+
+    // Update currentVCardData with fresh data
+    currentVCardData = { name, title, email, phone };
 
     // Regenerate vCard with current data
     const vcard = generateVCardText(name, title, email || '', phone || '');
@@ -563,9 +594,9 @@ END:VCARD`;
   }
 
   function downloadQRCode() {
-    const { name, title } = currentVCardData;
+    const { name, title, email, phone } = currentVCardData;
     const filename = name.toLowerCase().replace(/\s+/g, '-');
-    const vcard = generateVCardText(name, title, currentVCardData.email || '', currentVCardData.phone || '');
+    const vcard = generateVCardText(name, title, email || '', phone || '');
     const encodedVCard = encodeURIComponent(vcard);
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=512x512&data=${encodedVCard}`;
 
