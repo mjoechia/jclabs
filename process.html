@@ -111,19 +111,26 @@
 <body class="font-body-md text-on-surface">
 
 <!-- TopAppBar -->
-<header class="bg-white dark:bg-slate-900 border-b border-[#E2E8F0] dark:border-slate-800 shadow-[0px_10px_30px_rgba(26,43,60,0.05)] sticky top-0 z-50">
+<header class="bg-white sticky top-0 z-[100] border-b border-[#E2E8F0] shadow-[0px_10px_30px_rgba(26,43,60,0.05)]">
   <div class="flex justify-between items-center w-full px-6 py-4 max-w-[1280px] mx-auto">
     <div class="flex items-center gap-4">
       <span class="material-symbols-outlined text-slate-900 cursor-pointer active:opacity-70">menu</span>
-      <a href="index.html" class="text-xl font-bold text-[#1A2B3C] dark:text-[#E2E8F0] font-['Manrope'] tracking-tight">JC Labs</a>
+      <a href="index.html" class="text-xl font-bold text-[#1A2B3C] font-['Manrope'] tracking-tight">JC Labs</a>
     </div>
-    <nav class="hidden md:flex items-center gap-8">
-      <a class="text-[#1A2B3C] font-semibold hover:bg-slate-50 transition-colors px-3 py-2 rounded-lg" href="index.html">Home</a>
-      <a class="text-[#00B4D8] font-semibold hover:bg-slate-50 transition-colors px-3 py-2 rounded-lg border-b-2 border-[#00B4D8]" href="process.html">Our Process</a>
-      <a class="text-[#1A2B3C] font-semibold hover:bg-slate-50 transition-colors px-3 py-2 rounded-lg" href="team.html">Team</a>
-      <a class="text-[#1A2B3C] font-semibold hover:bg-slate-50 transition-colors px-3 py-2 rounded-lg" href="index.html#contact">Contact</a>
+    <nav class="hidden md:flex gap-8 items-center">
+      <a class="font-['Manrope'] font-semibold tracking-tight text-[#1A2B3C] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2" href="index.html" data-en="Home" data-cn="首页">Home</a>
+      <a class="font-['Manrope'] font-semibold tracking-tight text-[#1A2B3C] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2" href="projects.html" data-en="Our AI Projects" data-cn="我们的AI项目">Our AI Projects</a>
+      <a class="font-['Manrope'] font-semibold tracking-tight text-[#00B4D8] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2 border-b-2 border-[#00B4D8]" href="process.html" data-en="Our Process" data-cn="我们的流程">Our Process</a>
+      <a class="font-['Manrope'] font-semibold tracking-tight text-[#1A2B3C] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2" href="team.html" data-en="Team" data-cn="团队">Team</a>
+      <a class="font-['Manrope'] font-semibold tracking-tight text-[#1A2B3C] hover:bg-slate-50 transition-colors cursor-pointer px-3 py-2" href="#contact" data-en="Contact" data-cn="联系">Contact</a>
     </nav>
-    <a href="index.html#contact" class="hidden md:block bg-[#00B4D8] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition-all">Get Started</a>
+    <div class="flex items-center gap-4">
+      <button id="lang-toggle" class="hidden md:flex items-center gap-1 bg-gray-100 hover:bg-gray-200 text-[#1A2B3C] px-3 py-2 rounded-lg font-semibold text-sm transition-all" title="Toggle Language">
+        <span class="material-symbols-outlined text-lg">language</span>
+        <span id="lang-text">EN</span>
+      </button>
+      <a href="#contact" class="hidden md:block bg-[#00B4D8] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition-all" data-en="Get Started" data-cn="开始使用">Get Started</a>
+    </div>
   </div>
 </header>
 
