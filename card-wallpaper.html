@@ -407,7 +407,32 @@
     });
   }
 
-  // Initialize preview
+  // Read URL parameters and auto-fill form
+  function initFromURL() {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.has('name')) {
+      document.getElementById('name').value = params.get('name');
+    }
+    if (params.has('role')) {
+      document.getElementById('role').value = params.get('role');
+    }
+    if (params.has('phone')) {
+      document.getElementById('phone').value = params.get('phone');
+    }
+    if (params.has('email')) {
+      document.getElementById('email').value = params.get('email');
+    }
+    if (params.has('company')) {
+      document.getElementById('company').value = params.get('company');
+    }
+    if (params.has('website')) {
+      document.getElementById('website').value = params.get('website');
+    }
+  }
+
+  // Initialize from URL params, then update preview
+  initFromURL();
   updatePreview();
 </script>
 
